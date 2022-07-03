@@ -1,16 +1,25 @@
-# This is a sample Python script.
-
-# Press Mayús+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+import streamlit as st
+from utils.data_ingestion import get_cer_df
+from utils.pre_processing import get_uva_df
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    @st.cache
+    def cached_get_cer_df(**kwargs):
+        return get_cer_df(url=kwargs['url'] if 'url' in kwargs.keys() else None,
+                          delta_years=kwargs['delta_years'])
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    cer_df = cached_get_cer_df(delta_years=1)
+    uva_df = get_uva_df(cer_df)
+    st.title("Visualizador y pronosticador de CER y UVA")
+    with st.sidebar:
+        st.header("Parámetros")
+
+    with st.container():
+        col1, col2 = st.columns(2)
+        with col1:
+            st.header("CER")
+            st.table(cer_df)
+        with col2:
+            st.header("UVA")
+            st.table(uva_df)

@@ -1,4 +1,5 @@
 import streamlit as st
+import plotly.express as px
 from utils.data_ingestion import get_cer_df
 from utils.pre_processing import get_uva_df
 
@@ -19,7 +20,11 @@ if __name__ == '__main__':
         col1, col2 = st.columns(2)
         with col1:
             st.header("CER")
-            st.table(cer_df)
+            # st.table(cer_df)
+            fig = px.line(cer_df, x='fecha', y="CER")
+            st.plotly_chart(fig, use_container_width=True)
+            #
+            # (x=cer_df['date'], y=cer_df['cer'])
         with col2:
             st.header("UVA")
             st.table(uva_df)

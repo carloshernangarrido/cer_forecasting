@@ -22,22 +22,27 @@ def get_cer_df(url: str = None, delta_years: int = 1):
     fecha_desde.click()
     for i in range(3):
         fecha_desde.send_keys(Keys.LEFT)
-    fecha_desde.send_keys(f"{pytz.datetime.datetime.today().date().day}/", Keys.RIGHT,
-                          f"{pytz.datetime.datetime.today().date().month}/", Keys.RIGHT,
-                          f"{pytz.datetime.datetime.today().date().year-delta_years}")
+    # print(f"{str(pytz.datetime.datetime.today().date().day).zfill(2)}/", Keys.RIGHT,
+    #       f"{str(pytz.datetime.datetime.today().date().month).zfill(2)}/", Keys.RIGHT,
+    #       f"{str(pytz.datetime.datetime.today().date().year - delta_years).zfill(4)}")
+    fecha_desde.send_keys(f"{str(pytz.datetime.datetime.today().date().day).zfill(2)}", Keys.RIGHT)
+    fecha_desde.send_keys(f"{str(pytz.datetime.datetime.today().date().month).zfill(2)}", Keys.RIGHT)
+    fecha_desde.send_keys(f"{str(pytz.datetime.datetime.today().date().year - delta_years).zfill(4)}")
     fecha_hasta = driver.find_element(By.NAME, 'fecha_hasta')
     fecha_hasta.click()
     for i in range(3):
         fecha_hasta.send_keys(Keys.LEFT)
-    fecha_hasta.send_keys(f"{pytz.datetime.datetime.today().date().day}/", Keys.RIGHT,
-                          f"{pytz.datetime.datetime.today().date().month}/", Keys.RIGHT,
-                          f"{pytz.datetime.datetime.today().date().year}")
+    fecha_hasta.send_keys(f"{str(pytz.datetime.datetime.today().date().day).zfill(2)}", Keys.RIGHT,
+                          f"{str(pytz.datetime.datetime.today().date().month).zfill(2)}", Keys.RIGHT,
+                          f"{str(pytz.datetime.datetime.today().date().year).zfill(4)}")
     boton_buscar = driver.find_element(By.NAME, 'B1')
+    driver.implicitly_wait(10)
     boton_buscar.click()
     table_raw = driver.find_elements(By.TAG_NAME, 'tbody')
     table_raw = [row.text for row in table_raw]
     df = pd.DataFrame(columns=['date', 'cer'])
-    df['date'] = [pytz.timezone('America/Argentina/Mendoza').localize(pytz.datetime.datetime.strptime(row[0:10], "%d/%m/%Y"))
-                  for row in table_raw]
+    df['date'] = [
+        pytz.timezone('America/Argentina/Mendoza').localize(pytz.datetime.datetime.strptime(row[0:10], "%d/%m/%Y"))
+        for row in table_raw]
     df['cer'] = [float(row[11:].replace(',', '.')) for row in table_raw]
     return df

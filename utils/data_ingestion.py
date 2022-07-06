@@ -22,19 +22,22 @@ def get_cer_df(url: str = None, delta_years: int = 1):
     fecha_desde.click()
     for i in range(3):
         fecha_desde.send_keys(Keys.LEFT)
-    # print(f"{str(pytz.datetime.datetime.today().date().day).zfill(2)}/", Keys.RIGHT,
-    #       f"{str(pytz.datetime.datetime.today().date().month).zfill(2)}/", Keys.RIGHT,
-    #       f"{str(pytz.datetime.datetime.today().date().year - delta_years).zfill(4)}")
-    fecha_desde.send_keys(f"{str(pytz.datetime.datetime.today().date().day).zfill(2)}", Keys.RIGHT)
-    fecha_desde.send_keys(f"{str(pytz.datetime.datetime.today().date().month).zfill(2)}", Keys.RIGHT)
+    fecha_desde.send_keys(f"{str(pytz.datetime.datetime.today().date().day).zfill(2)}")
+    driver.implicitly_wait(10)
+    fecha_desde.send_keys(f"{str(pytz.datetime.datetime.today().date().month).zfill(2)}")
+    driver.implicitly_wait(10)
     fecha_desde.send_keys(f"{str(pytz.datetime.datetime.today().date().year - delta_years).zfill(4)}")
+    driver.implicitly_wait(10)
     fecha_hasta = driver.find_element(By.NAME, 'fecha_hasta')
     fecha_hasta.click()
     for i in range(3):
         fecha_hasta.send_keys(Keys.LEFT)
-    fecha_hasta.send_keys(f"{str(pytz.datetime.datetime.today().date().day).zfill(2)}", Keys.RIGHT,
-                          f"{str(pytz.datetime.datetime.today().date().month).zfill(2)}", Keys.RIGHT,
-                          f"{str(pytz.datetime.datetime.today().date().year).zfill(4)}")
+    fecha_hasta.send_keys(f"{str(pytz.datetime.datetime.today().date().day).zfill(2)}")
+    driver.implicitly_wait(10)
+    fecha_hasta.send_keys(f"{str(pytz.datetime.datetime.today().date().month).zfill(2)}")
+    driver.implicitly_wait(10)
+    fecha_hasta.send_keys(f"{str(pytz.datetime.datetime.today().date().year).zfill(4)}")
+    driver.implicitly_wait(10)
     boton_buscar = driver.find_element(By.NAME, 'B1')
     driver.implicitly_wait(10)
     boton_buscar.click()

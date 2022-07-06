@@ -24,6 +24,7 @@ if __name__ == '__main__':
             'Años hacia atrás',
             (1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
     cer_df = cached_get_cer_df(delta_years=option_delta_years)
+    cer_df = cer_df.copy(deep=True)
     uva_df = get_uva_df(cer_df)
 
     st.header("Datos actuales")

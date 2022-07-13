@@ -48,4 +48,8 @@ def get_cer_df(url: str = None, delta_years: int = 1):
         pytz.timezone('America/Argentina/Mendoza').localize(pytz.datetime.datetime.strptime(row[0:10], "%d/%m/%Y"))
         for row in table_raw]
     df['cer'] = [float(row[11:].replace(',', '.')) for row in table_raw]
+
+    df.set_index(keys=df['date'], inplace=True)
+    df.drop(columns=['date'], inplace=True)
+
     return df

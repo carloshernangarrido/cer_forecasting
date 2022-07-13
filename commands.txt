@@ -1,1 +1,4 @@
-pip freeze > requirements.txt
+- update requirements file after installing something
+    pip freeze > requirements.txt
+- create a new branch and checkout to it
+    git checkout -b forecasting_prophet

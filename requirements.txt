@@ -57,6 +57,7 @@ parso==0.8.3
 patsy==0.5.2
 pickleshare==0.7.5
 Pillow==9.2.0
+plotly==5.9.0
 prometheus-client==0.14.1
 prompt-toolkit==3.0.30
 protobuf==3.20.1
@@ -72,6 +73,7 @@ pyparsing==3.0.9
 pyrsistent==0.18.1
 PySocks==1.7.1
 python-dateutil==2.8.2
+python-dotenv==0.20.0
 pytz==2022.1
 pytz-deprecation-shim==0.1.0.post0
 pywin32==304
@@ -91,6 +93,7 @@ soupsieve==2.3.2.post1
 stack-data==0.3.0
 statsmodels==0.13.2
 streamlit==1.10.0
+tenacity==8.0.1
 terminado==0.15.0
 tinycss2==1.1.1
 toml==0.10.2
@@ -106,6 +109,7 @@ urllib3==1.26.9
 validators==0.20.0
 watchdog==2.1.9
 wcwidth==0.2.5
+webdriver-manager==3.7.1
 webencodings==0.5.1
 widgetsnbextension==3.6.1
 wsproto==1.1.0

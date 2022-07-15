@@ -1,1 +1,6 @@
-pip freeze > requirements.txt
+- run dashboard server locally
+    streamlit run main.py
+- update requirements file after installing something
+    pip freeze > requirements.txt
+- create a new branch and checkout to it
+    git checkout -b my_new_branch

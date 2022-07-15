@@ -72,6 +72,7 @@ Pillow==9.2.0
 plotly==5.9.0
 prometheus-client==0.14.1
 prompt-toolkit==3.0.30
+prophet==1.1
 protobuf==3.20.1
 psutil==5.9.1
 pure-eval==0.2.2

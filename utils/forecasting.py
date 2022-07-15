@@ -16,12 +16,9 @@ Uses prophet to forecast df a number of days ahead.
     m.fit(df)
     df_future = m.predict(m.make_future_dataframe(periods=days_ahead))
     cer_df_fc = pd.DataFrame(data=None, columns=df_actual.columns,
-                          index=df_future['ds'].map(lambda x: x.replace(tzinfo=df_actual.index[0].tzinfo)))
+                             index=df_future['ds'].map(lambda x: x.replace(tzinfo=df_actual.index[0].tzinfo)))
     cer_df_fc.index.freq, cer_df_fc.index.name = 'D', 'date'
     cer_df_fc['cer'] = df_future['yhat'].values
     cer_df_fc.insert(1, column='cer_lower', value=df_future['yhat_lower'].values)
     cer_df_fc.insert(2, column='cer_upper', value=df_future['yhat_upper'].values)
     return cer_df_fc
-
-
-

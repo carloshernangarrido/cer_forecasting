@@ -4,7 +4,18 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.keys import Keys
+import datetime as dt
 import pandas as pd
+import warnings
+
+
+def validate_date(string):
+    try:
+        dt.datetime.strptime(string, '%d/%m/%Y')
+        return True
+    except ValueError:
+        warnings.warn("Incorrect data format, should be DD/MM/YYYY")
+        return False
 
 
 def get_cer_df(url: str = None, delta_years: int = 1):
@@ -42,7 +53,8 @@ def get_cer_df(url: str = None, delta_years: int = 1):
     driver.implicitly_wait(10)
     boton_buscar.click()
     table_raw = driver.find_elements(By.TAG_NAME, 'tbody')
-    table_raw = [row.text for row in table_raw]
+    table_raw = [row.text for row in table_raw if validate_date(row.text[0:10])]
+    print(table_raw)
     df = pd.DataFrame(columns=['date', 'cer'])
     df['date'] = [
         pytz.timezone('America/Argentina/Mendoza').localize(pytz.datetime.datetime.strptime(row[0:10], "%d/%m/%Y"))

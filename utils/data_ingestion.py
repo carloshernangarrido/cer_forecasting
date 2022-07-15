@@ -32,7 +32,7 @@ def get_cer_df(url: str = None, delta_years: int = 1):
               "%A0(Base%202.2.2002=1)"
     # driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     firefoxoptions = Options()
-    # firefoxoptions.add_argument("--headless")
+    firefoxoptions.add_argument("--headless")
     service = Service(GeckoDriverManager().install())
     driver = webdriver.Firefox(
         options=firefoxoptions,

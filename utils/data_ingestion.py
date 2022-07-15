@@ -2,7 +2,10 @@ import pytz
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
-from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.firefox import GeckoDriverManager
+# from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.common.keys import Keys
 import datetime as dt
 import pandas as pd
@@ -27,7 +30,14 @@ def get_cer_df(url: str = None, delta_years: int = 1):
     if url is None:
         url = "http://www.bcra.gov.ar/PublicacionesEstadisticas/Principales_variables_datos.asp?serie=3540&detalle=CER" \
               "%A0(Base%202.2.2002=1)"
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+    # driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+    firefoxoptions = Options()
+    # firefoxoptions.add_argument("--headless")
+    service = Service(GeckoDriverManager().install())
+    driver = webdriver.Firefox(
+        options=firefoxoptions,
+        service=service,
+    )
     driver.get(url)
     fecha_desde = driver.find_element(By.NAME, 'fecha_desde')
     fecha_desde.click()

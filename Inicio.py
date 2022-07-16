@@ -4,6 +4,13 @@ from utils.common import common_data, common_dash
 from utils.plots import plot_df_fc, df2plot
 from utils.pre_processing import get_day_diff
 
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.firefox.service import Service
+from webdriver_manager.firefox import GeckoDriverManager
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+
 
 if __name__ == '__main__':
     st.set_page_config(page_title='PronostiCER', layout='wide',

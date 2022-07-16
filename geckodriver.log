@@ -27,9 +27,8 @@ DevTools listening on ws://localhost:60906/devtools/browser/7ef3665f-77e9-4299-b
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileD23j9N\\search.json.mozlz4", (void 0)))
 console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 767))
 console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/module1657926660186	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'1657926660221	Marionette	WARN	Ignoring event 'DOMContentLoaded'JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
-lete'.
-1657926776474	geckodriver	INFO	Listening on 127.0.0.1:61439
-1657926779571	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61442" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofiledFD6Ti"
+JavaScript error: , line 0: NotFoundError: Could not move source file(C:\Users\joses\AppData\Local\Temp\rust_mozprofileojafUK\bookmarkbackups\bookmarks-2022-07-15_11_3PNJ5yTPcQWvmh8-meGUIw==.jsonlz4) because it does not exist
+ote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofiledFD6Ti"
 1657926780810	Marionette	INFO	Marionette enabled
 1657926780815	Marionette	INFO	Listening on port 61460
 WebDriver BiDi listening on ws://localhost:61442
@@ -79,3 +78,527 @@ JavaScript error: resource://gre/actors/DateTimePickerChild.jsm, line 64: TypeEr
 1657927191073	Marionette	INFO	Stopped listening on port 61721
 console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
 [Parent 1704, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1657928090785	geckodriver	INFO	Listening on 127.0.0.1:61910
+1657928093833	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61911" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilexB5Nik"
+1657928094206	Marionette	INFO	Marionette enabled
+1657928094211	Marionette	INFO	Listening on port 61920
+WebDriver BiDi listening on ws://localhost:61911
+Read port: 61920
+1657928095118	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilexB5Nik\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61911/devtools/browser/d06a8da1-148c-4122-84b7-d8a0788dcae6
+1657928102016	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:234:19
+TimedPromise@chrome://remote/content/marionette/sync.js:219:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1657928102775	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:234:19
+TimedPromise@chrome://remote/content/marionette/sync.js:219:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: resource://gre/actors/DateTimePickerChild.jsm, line 64: TypeError: aElement is null
+1657928347329	geckodriver	INFO	Listening on 127.0.0.1:62017
+1657928350396	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62018" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileIzk8ut"
+1657928350821	Marionette	INFO	Marionette enabled
+1657928350828	Marionette	INFO	Listening on port 62027
+WebDriver BiDi listening on ws://localhost:62018
+Read port: 62027
+1657928352801	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileIzk8ut\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62018/devtools/browser/2582d256-8658-45e2-91f8-9a51c47b1550
+JavaScript error: resource://gre/actors/DateTimePickerChild.jsm, line 64: TypeError: aElement is null
+JavaScript error: resource://gre/actors/DateTimePickerChild.jsm, line 64: TypeError: aElement is null
+1657928489639	geckodriver	INFO	Listening on 127.0.0.1:62112
+1657928493077	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62113" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofiledoAFaW"
+1657928493764	Marionette	INFO	Marionette enabled
+1657928493770	Marionette	INFO	Listening on port 62122
+WebDriver BiDi listening on ws://localhost:62113
+Read port: 62122
+1657928496246	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofiledoAFaW\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62113/devtools/browser/56267df8-d514-408a-83a8-6342765716fd
+JavaScript error: resource://gre/actors/DateTimePickerChild.jsm, line 64: TypeError: aElement is null
+JavaScript error: resource://gre/actors/DateTimePickerChild.jsm, line 64: TypeError: aElement is null
+1657928588541	Marionette	INFO	Stopped listening on port 62122
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+!!! error running onStopped callback: TypeError: callback is not a function
+1657929026329	geckodriver	INFO	Listening on 127.0.0.1:62292
+1657929029381	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62293" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileWrYFvZ"
+1657929029840	Marionette	INFO	Marionette enabled
+1657929029847	Marionette	INFO	Listening on port 62302
+WebDriver BiDi listening on ws://localhost:62293
+Read port: 62302
+1657929030549	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileWrYFvZ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62293/devtools/browser/c1f52ef7-fd5b-42f3-805c-b105aadf01b7
+JavaScript error: resource://gre/actors/DateTimePickerChild.jsm, line 64: TypeError: aElement is null
+1657929037587	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:234:19
+TimedPromise@chrome://remote/content/marionette/sync.js:219:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: resource://gre/actors/DateTimePickerChild.jsm, line 64: TypeError: aElement is null
+1657929038327	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:234:19
+TimedPromise@chrome://remote/content/marionette/sync.js:219:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1657929186037	geckodriver	INFO	Listening on 127.0.0.1:62390
+1657929189037	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62391" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileqIZI6r"
+1657929189658	Marionette	INFO	Marionette enabled
+1657929189663	Marionette	INFO	Listening on port 62400
+WebDriver BiDi listening on ws://localhost:62391
+Read port: 62400
+1657929190452	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileqIZI6r\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62391/devtools/browser/a8699545-13ad-4e03-b94a-5e62ccec94ab
+1657929197300	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:234:19
+TimedPromise@chrome://remote/content/marionette/sync.js:219:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1657929198532	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:234:19
+TimedPromise@chrome://remote/content/marionette/sync.js:219:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: resource://gre/actors/DateTimePickerChild.jsm, line 64: TypeError: aElement is null
+1657929285377	geckodriver	INFO	Listening on 127.0.0.1:62480
+1657929288477	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62481" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileUFOZK5"
+1657929288921	Marionette	INFO	Marionette enabled
+1657929288928	Marionette	INFO	Listening on port 62490
+WebDriver BiDi listening on ws://localhost:62481
+Read port: 62490
+1657929289935	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileUFOZK5\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62481/devtools/browser/e2c4096b-2066-42fb-a81d-2f31035404c3
+1657929295373	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: resource://gre/actors/DateTimePickerChild.jsm, line 64: TypeError: aElement is null
+1657929556057	geckodriver	INFO	Listening on 127.0.0.1:62581
+1657929559123	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62582" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileY6auCN"
+1657929559545	Marionette	INFO	Marionette enabled
+1657929559551	Marionette	INFO	Listening on port 62591
+WebDriver BiDi listening on ws://localhost:62582
+Read port: 62591
+1657929560363	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileY6auCN\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62582/devtools/browser/1a185e1b-35f4-4b0d-8f08-d22067b12543
+JavaScript error: resource://gre/actors/DateTimePickerChild.jsm, line 64: TypeError: aElement is null
+1657929709482	geckodriver	INFO	Listening on 127.0.0.1:62683
+1657929712681	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62684" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileFQmTbp"
+1657929713544	Marionette	INFO	Marionette enabled
+1657929713560	Marionette	INFO	Listening on port 62703
+WebDriver BiDi listening on ws://localhost:62684
+Read port: 62703
+1657929715413	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileaZ88Sy\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62684/devtools/browser/058bd5e0-f206-47ac-bd52-b2c6ae981450
+1657929726902	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/mariJavaScript error: resource://gre/actors/DateTimePickerChild.jsm, line 64: TypeError: aElement is null
+1657929742716	Marionette	INFO	Stopped listening on port 62702
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 10636, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+edPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:234:19
+TimedPromise@chrome://remote/content/marionette/sync.js:219:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: resource://gre/actors/DateTimePickerChild.jsm, line 64: TypeError: aElement is null
+1657929747658	Marionette	INFO	Stopped listening on port 62703
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1657929792366	geckodriver	INFO	Listening on 127.0.0.1:62842
+1657929795427	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "62843" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileE7kb6G"
+*** You are running in headless mode.
+1657929797420	Marionette	INFO	Marionette enabled
+1657929797427	Marionette	INFO	Listening on port 62852
+WebDriver BiDi listening on ws://localhost:62843
+Read port: 62852
+1657929798085	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileE7kb6G\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62843/devtools/browser/33027ed5-d3fa-41ec-8d37-d15fe312ab02
+1657930545358	geckodriver	INFO	Listening on 127.0.0.1:62999
+1657930548420	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63000" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilekrOY2n"
+1657930548896	Marionette	INFO	Marionette enabled
+1657930548902	Marionette	INFO	Listening on port 63009
+WebDriver BiDi listening on ws://localhost:63000
+Read port: 63009
+1657930549499	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilekrOY2n\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63000/devtools/browser/0d5af60e-8471-4424-abf4-32083d8f0df1
+JavaScript error: resource://gre/actors/DateTimePickerChild.jsm, line 64: TypeError: aElement is null
+1657930602404	geckodriver	INFO	Listening on 127.0.0.1:63096
+1657930605454	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63097" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilewr0qtM"
+1657930606877	Marionette	INFO	Marionette enabled
+1657930606881	Marionette	INFO	Listening on port 63106
+WebDriver BiDi listening on ws://localhost:63097
+Read port: 63106
+1657930607798	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilewr0qtM\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63097/devtools/browser/c5d0fbe3-107b-4bb4-8d89-0a9f53279e1d
+1657930620669	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:234:19
+TimedPromise@chrome://remote/content/marionette/sync.js:219:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1657930622489	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:234:19
+TimedPromise@chrome://remote/content/marionette/sync.js:219:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: resource://gre/actors/DateTimePickerChild.jsm, line 64: TypeError: aElement is null
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1657971660971	geckodriver	INFO	Listening on 127.0.0.1:63549
+1657971664041	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63550" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileN38eq7"
+1657971666725	Marionette	INFO	Marionette enabled
+1657971666731	Marionette	INFO	Listening on port 63561
+WebDriver BiDi listening on ws://localhost:63550
+Read port: 63561
+1657971667486	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileN38eq7\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63550/devtools/browser/ea6a5726-a731-4d25-a026-1505bef3d763
+JavaScript error: resource://gre/actors/DateTimePickerChild.jsm, line 64: TypeError: aElement is null
+1657972017115	geckodriver	INFO	Listening on 127.0.0.1:63775
+1657972020151	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63776" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofile3ErTjD"
+1657972020741	Marionette	INFO	Marionette enabled
+1657972020748	Marionette	INFO	Listening on port 63786
+WebDriver BiDi listening on ws://localhost:63776
+Read port: 63786
+1657972021394	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofile3ErTjD\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63776/devtools/browser/ef06713d-62d6-4561-baa9-9d08e8114942
+1657972064264	Marionette	INFO	Stopped listening on port 63786
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 16088, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1657972123484	geckodriver	INFO	Listening on 127.0.0.1:63903
+1657972126573	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63904" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileHOLR7z"
+1657972127023	Marionette	INFO	Marionette enabled
+1657972127027	Marionette	INFO	Listening on port 63913
+WebDriver BiDi listening on ws://localhost:63904
+Read port: 63913
+1657972127815	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileHOLR7z\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63904/devtools/browser/26766a6b-5456-43cf-a0f8-0f634e9ef88f
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.google.com"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1657972171429	Marionette	INFO	Stopped listening on port 63913
+1657972422557	geckodriver	INFO	Listening on 127.0.0.1:64124
+1657972425602	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64125" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileZmzoMC"
+1657972427093	Marionette	INFO	Marionette enabled
+1657972427099	Marionette	INFO	Listening on port 64136
+WebDriver BiDi listening on ws://localhost:64125
+Read port: 64136
+1657972427892	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileZmzoMC\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64125/devtools/browser/4022c2d1-06f3-4c14-85ee-84f8a0132735
+1657972435644	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:234:19
+TimedPromise@chrome://remote/content/marionette/sync.js:219:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+[GFX1-]: DCompositionSurface::BeginDraw failed: 0x8007000e Rect(x=524288, y=524288, w=1024, h=512)
+[GFX1-]: Fallback WR to SW-WR + D3D11
+[GFX1-]: Failed to create StagingTexture: Size(1024,512)
+[GFX1-]: Failed to allocate Texture2D: Size(1024,512)
+[GFX1-]: Failed to allocate Texture2D: Size(1024[GF,X151-]2)
+: Fallback SW-WR + D3[GD11 FXt1-]:o Faile SW-WRd to a
+llocate Texture2D: Size(1024,512)
+[GFX1-]: GFX: D3D11 skip BeginFrame with device-removed.
+[GFX1-]: MapTile failed aValidRect: Rect(x=0, y=0, w=1024, h=512)
+[GFX1-]: MapTile failed aValidRect: Rect(x=0, y=0, w=342, h=512)
+[GFX1-]: MapTile failed aValidRect: Rect(x=0, y=0, w=1024, h=208)
+[GFX1-]: MapTile failed aValidRect: Rect(x=0, y=0, w=342, h=208)
+[GFX1-]: wr_renderer_render: OutOfMemory
+[GFX1-]: wr_renderer_render: OutOfMemory
+[GFX1-]: GFX: RenderThread detected a device reset in PostUpdate
+1657972483463	Marionette	INFO	Stopped listening on port 64136
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/CrashManager.jsm, line 906: AbortError: IOUtils: Shutting down and refusing additional I/O tasks
+1657972525950	geckodriver	INFO	Listening on 127.0.0.1:64296
+1657972529008	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64297" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilebAcwc2"
+1657972529557	Marionette	INFO	Marionette enabled
+1657972529562	Marionette	INFO	Listening on port 64308
+WebDriver BiDi listening on ws://localhost:64297
+Read port: 64308
+1657972530202	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilebAcwc2\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64297/devtools/browser/2d59d104-8af7-46f6-9918-a13a6d74a5b7
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.google.com"
+1657972544140	Marionette	INFO	Stopped listening on port 64308
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1657972730986	geckodriver	INFO	Listening on 127.0.0.1:64512
+1657972734042	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64513" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofile4aiT5J"
+1657972734533	Marionette	INFO	Marionette enabled
+1657972734538	Marionette	INFO	Listening on port 64526
+WebDriver BiDi listening on ws://localhost:64513
+Read port: 64526
+1657972735379	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofile4aiT5J\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64513/devtools/browser/642b3668-6616-48c8-b960-771e0e80b663
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://www.bcra.gov.ar"
+1657972819187	Marionette	INFO	Stopped listening on port 64526
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+!!! error running onStopped callback: TypeError: callback is not a function
+" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileW9rwpT"
+1657972810319	Marionette	INFO	Marionette enabled
+1657972810324	Marionette	INFO	Listening on port 64655
+WebDriver BiDi listening on ws://localhost:64643
+Read port: 64655
+1657972811292	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Failed to compile vertex shader: brush_linear_gradient_ALPHA_PASS
+
+[2022-07-16T12:00:12Z ERROR webrender::device::gl] Failed to compile vertex shader: brush_linear_gradient_ALPHA_PASS
+    
+[GFX1-]: Failed to compile vertex shader: brush_image_ALPHA_PASS_TEXTURE_2D
+
+[2022-07-16T12:00:12Z ERROR webrender::device::gl] Failed to compile vertex shader: brush_image_ALPHA_PASS_TEXTURE_2D
+    
+[GFX1-]: DCompositionSurface::BeginDraw failed: 0x887a0005 Rect(x=524288, y=524288, w=1024, h=512)
+[GFX1-]: Failed to compile vertex shader: brush_solid
+
+[2022-07-16T12:00:13Z ERROR webrender::device::gl] Failed to compile vertex shader: brush_solid
+    
+[GFX1-]: Failed to compile vertex shader: brus[GFX1-]: Fallbh_imaack WR to SWge_A-WR +LPH D3D1A_P1
+ASS_TEXTURE_2D
+
+[2022-07-16T12:00:13Z ERROR webrender::device::gl] Failed to compile vertex shader: brush_image_ALPHA_PASS_TEXTURE_2D
+    
+[GFX1-]: Failed to compile vertex shader: brush_image_ALPHA_PASS_TEXTURE_2D
+
+[2022-07-16T12:00:13Z ERROR webrender::device::gl] Failed to compile vertex shader: brush_image_ALPHA_PASS_TEXTURE_2D
+    
+[GFX1-]: Failed to compile vertex shader: brush_image_ALPHA_PASS_TEXTURE_2D
+
+[2022-07-16T12:00:13Z ERROR webrender::device::gl] Failed to compile vertex shader: brush_image_ALPHA_PASS_TEXTURE_2D
+    
+[GFX1-]: Failed to compile vertex shader: brush_opacity_ALPHA_PASS
+
+[2022-07-16T12:00:13Z ERROR webrender::device::gl] Failed to compile vertex shader: brush_opacity_ALPHA_PASS
+    
+[GFX1-]: Failed to compile vertex shader: brush_solid_ALPHA_PASS
+
+[2022-07-16T12:00:13Z ERROR webrender::device::gl] Failed to compile vertex shader: brush_solid_ALPHA_PASS
+    
+[GFX1-]: Failed to compile vertex shader: brush_image_ALPHA_PASS_TEXTURE_2D
+
+[2022-07-16T12:00:13Z ERROR webrender::device::gl] Failed to compile vertex shader: brush_image_ALPHA_PASS_TEXTURE_2D
+    
+[GFX1-]: Failed to compile vertex shader: brush_image_ALPHA_PASS_TEXTURE_2D
+
+[2022-07-16T12:00:13Z ERROR webrender::device::gl] Failed to compile vertex shader: brush_image_ALPHA_PASS_TEXTURE_2D
+    
+[GFX1-]: Failed to compile vertex shader: ps_text_run_ALPHA_PASS_DUAL_SOURCE_BLENDING_TEXTURE_2D
+
+[2022-07-16T12:00:13Z ERROR webrender::device::gl] Failed to compile vertex shader: ps_text_run_ALPHA_PASS_DUAL_SOURCE_BLENDING_TEXTURE_2D
+    
+[GFX1-]: DCompositionSurface::BeginDraw failed: 0x887a0005 Rect(x=525312, y=524288, w=342, h=512)
+[GFX1-]: Failed to compile vertex shader: brush_solid
+
+[2022-07-16T12:00:13Z ERROR webrender::device::gl] Failed to compile vertex shader: brush_solid
+    
+[GFX1-]: Failed to compile vertex shader: brush_image_ALPHA_PASS_TEXTURE_2D
+
+[2022-07-16T12:00:13Z ERROR webrender::device::gl] Failed to compile vertex shader: brush_image_ALPHA_PASS_TEXTURE_2D
+    
+[GFX1-]: Failed to compile vertex shader: brush_image_ALPHA_PASS_TEXTURE_2D
+
+[2022-07-16T12:00:13Z ERROR webrender::device::gl] Failed to compile vertex shader: brush_image_ALPHA_PASS_TEXTURE_2D
+    
+[GFX1-]: Failed to compile vertex shader: brush_solid_ALPHA_PASS
+
+[2022-07-16T12:00:13Z ERROR webrender::device::gl] Failed to compile vertex shader: brush_solid_ALPHA_PASS
+    
+[GFX1-]: Failed to compile vertex shader: brush_image_ALPHA_PASS_TEXTURE_2D
+
+[2022-07-16T12:00:13Z ERROR webrender::device::gl] Failed to compile vertex shader: brush_image_ALPHA_PASS_TEXTURE_2D
+    
+[GFX1-]: Failed to compile vertex shader: brush_image_ALPHA_PASS_TEXTURE_2D
+
+[2022-07-16T12:00:13Z ERROR webrender::device::gl] Failed to compile vertex shader: brush_image_ALPHA_PASS_TEXTURE_2D
+    
+[GFX1-]: DCompositionSurface::BeginDraw failed: 0x887a0005 Rect(x=524288, y=524800, w=1024, h=208)
+[GFX1-]: Failed to compile vertex shader: brush_solid
+
+[2022-07-16T12:00:13Z ERROR webrender::device::gl] Failed to compile vertex shader: brush_solid
+    
+[GFX1-]: DCompositionSurface::BeginDraw failed: 0x887a0005 Rect(x=525312, y=524800, w=342, h=208)
+[GFX1-]: Failed to compile vertex shader: brush_solid
+
+[2022-07-16T12:00:13Z ERROR webrender::device::gl] Failed to compile vertex shader: brush_solid
+    
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_linear_gradient_ALPHA_PASS", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_image_ALPHA_PASS_TEXTURE_2D", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_solid", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_image_ALPHA_PASS_TEXTURE_2D", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_image_ALPHA_PASS_TEXTURE_2D", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_image_ALPHA_PASS_TEXTURE_2D", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_opacity_ALPHA_PASS", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_solid_ALPHA_PASS", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_image_ALPHA_PASS_TEXTURE_2D", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_image_ALPHA_PASS_TEXTURE_2D", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("ps_text_run_ALPHA_PASS_DUAL_SOURCE_BLENDING_TEXTURE_2D", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_solid", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_image_ALPHA_PASS_TEXTURE_2D", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_image_ALPHA_PASS_TEXTURE_2D", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_solid_ALPHA_PASS", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_image_ALPHA_PASS_TEXTURE_2D", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_image_ALPHA_PASS_TEXTURE_2D", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_solid", ""))
+[GFX1-]: wr_renderer_render: Shader(Compilation("brush_solid", ""))
+[GFX1-]: GFX: RenderThread detected a device reset in PostUpdate
+[GFX1-]: Failed to make render context current during destroying.
+out of memory: 0x0000000000100000 bytes requested
+[Parent 16968, IPC I/O Parent] WARNING: Failed to launch tab subprocess: file /builds/worker/checkouts/gecko/ipc/glue/GeckoChildProcessHost.cpp:759
+[GFX1-][GFX1-]: Receive IPC close with reason=Ab: ReceivnormalSeh IutdPC cloownse 
+with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+out of memory: 0x0000000000100000 bytes requested
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Failed to create StagingTexture: Size(1024,512)
+[GFX1-]: Failed to allocate Texture2D: Size(1024,512)
+[GFX1-]: Failed to allocate Texture2D: Size(1024,512)
+[GFX1-]: Failed to allocate Texture2D: Size(1024,512)
+[GFX1-]: GFX: D3D11 skip BeginFrame with device-removed.
+[GFX1-]: MapTile failed aValidRect: Rect(x=0, y=0, w=1024, h=512)
+[GFX1-]: MapTile failed aValidRect: Rect(x=0, y=0, w=342, h=512)
+[GFX1-]: MapTile failed aValidRect: Rect(x=0, y=0, w=1024, h=208)
+[GFX1-]: MapTile failed aValidRect: Rect(x=0, y=0, w=342, h=208)
+[GFX1-]: wr_renderer_render: OutOfMemory
+[GFX1-]: GFX: RenderThread detected a device reset in PostUpdate
+JavaScript error: , line 0: uncaught exception: out of memory
+[GFX1[GFX1-]: Re-c]e:i vFea lIlPbCack SW -WRc lose with +reaso D3Dn=A1b1 to SW-WRno
+rmalShutdown
+[Parent 16968, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+[GFX1-]: wr_renderer_render: OutOfMemory
+[GFX1-]: wr_renderer_render: OutOfMemory
+[GFX1-]: Fallback remains SW-WR
+[GFX1-]: wr_renderer_render: OutOfMemory
+[GFX1-]: wr_renderer_render: OutOfMemory
+[GFX1-]: wr_renderer_render: OutOfMemory
+[GFX1-]: wr_renderer_render: OutOfMemory
+[GFX1-]: wr_renderer_render: OutOfMemory
+[GFX1-]: wr_renderer_render: OutOfMemory
+[GFX1-]: wr_renderer_render: OutOfMemory
+out of memory: 0x0000000000100000 bytes requested
+[Parent 16968, IPC I/O Parent] WARNING: pipe error: 232: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:554
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+JavaScript error: chrome://browser/content/browser-siteProtections.js, line 1351: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1657972863261	Marionette	INFO	Stopped listening on port 64655
+1657972863263	CDP	WARN	Failed to remove undefined (Could not parse path (undefined): NS_ERROR_FILE_UNRECOGNIZED_PATH)
+1657972886495	geckodriver	INFO	Listening on 127.0.0.1:64729
+1657972889570	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64730" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofile5fM3QF"
+1657972889992	Marionette	INFO	Marionette enabled
+1657972889996	Marionette	INFO	Listening on port 64740
+WebDriver BiDi listening on ws://localhost:64730
+Read port: 64740
+1657972890694	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofile5fM3QF\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64730/devtools/browser/711f662f-a866-49e1-90a3-427972cc1ab5
+JavaScript error: resource://gre/actors/DateTimePickerChild.jsm, line 64: TypeError: aElement is null
+1657972929854	Marionette	INFO	Stopped listening on port 64740
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1657972935468	geckodriver	INFO	Listening on 127.0.0.1:64816
+1657972938531	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64817" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilezOwEDP"
+1657972939198	Marionette	INFO	Marionette enabled
+1657972939203	Marionette	INFO	Listening on port 64828
+WebDriver BiDi listening on ws://localhost:64817
+Read port: 64828
+1657972940030	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilezOwEDP\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64817/devtools/browser/306828d6-c42f-4973-adfc-9d4cdb1bb5e2
+1657972946648	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:234:19
+TimedPromise@chrome://remote/content/marionette/sync.js:219:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: chrome://global/content/bindings/spinner.js, line 151: TypeError: itemsView[(this.state.index + viewportTopOffset)] is undefined
+1657973010107	Marionette	INFO	Stopped listening on port 64828
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 16284, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1657973480748	geckodriver	INFO	Listening on 127.0.0.1:65193
+1657973483787	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65194" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofiledVo1Mf"
+1657973484303	Marionette	INFO	Marionette enabled
+1657973484310	Marionette	INFO	Listening on port 65204
+WebDriver BiDi listening on ws://localhost:65194
+Read port: 65204
+1657973485134	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofiledVo1Mf\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65194/devtools/browser/d6743a74-2090-491a-84b4-dd1db5a70fa1
+1657973518599	Marionette	INFO	Stopped listening on port 65204
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1657973610447	geckodriver	INFO	Listening on 127.0.0.1:65321
+1657973613505	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65322" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileyddUZK"
+1657973613959	Marionette	INFO	Marionette enabled
+1657973613965	Marionette	INFO	Listening on port 65332
+WebDriver BiDi listening on ws://localhost:65322
+Read port: 65332
+1657973614693	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileyddUZK\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65322/devtools/browser/cf9552b2-4de6-40ab-8cf0-b2c20e5371c3
+JavaScript error: resource://gre/actors/DateTimePickerChild.jsm, line 64: TypeError: aElement is null
+1657973707397	Marionette	INFO	Stopped listening on port 65332
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1657973711871	geckodriver	INFO	Listening on 127.0.0.1:65437
+1657973714925	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65438" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileODZXQ7"
+1657973715410	Marionette	INFO	Marionette enabled
+1657973715416	Marionette	INFO	Listening on port 65449
+WebDriver BiDi listening on ws://localhost:65438
+Read port: 65449
+1657973716195	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileODZXQ7\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65438/devtools/browser/aa15f494-c002-4f8f-9fca-5d37c75633fa
+1657973722775	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://www.bcra.gov.ar"
+JavaScript error: resource://gre/actors/DateTimePickerParent.jsm, line 67: InvalidStateError: JSWindowActorParent.sendAsyncMessage: JSWindowActorParent cannot send at the moment
+1657973742235	Marionette	INFO	Stopped listening on port 65449
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1657973966315	geckodriver	INFO	Listening on 127.0.0.1:49245
+1657973969406	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49246" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilel0GLJm"
+1657973970049	Marionette	INFO	Marionette enabled
+1657973970056	Marionette	INFO	Listening on port 49257
+WebDriver BiDi listening on ws://localhost:49246
+Read port: 49257
+1657973970723	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilel0GLJm\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49246/devtools/browser/f6d1cc86-8834-4bf7-b5d3-1446e71fc5c9
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://www.bcra.gov.ar"
+JavaScript error: resource://gre/actors/DateTimePickerParent.jsm, line 67: InvalidStateError: JSWindowActorParent.sendAsyncMessage: JSWindowActorParent cannot send at the moment
+1657974171709	Marionette	INFO	Stopped listening on port 49257
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 1716, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1657974185430	geckodriver	INFO	Listening on 127.0.0.1:49427
+1657974188461	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49428" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileWNToF4"
+1657974189957	Marionette	INFO	Marionette enabled
+1657974189963	Marionette	INFO	Listening on port 49439
+WebDriver BiDi listening on ws://localhost:49428
+Read port: 49439
+1657974190751	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileWNToF4\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49428/devtools/browser/c727fae8-675d-4dc6-b503-bdb56c135d60
+1657974198082	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:234:19
+TimedPromise@chrome://remote/content/marionette/sync.js:219:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://www.bcra.gov.ar"
+JavaScript error: resource://gre/actors/DateTimePickerParent.jsm, line 67: InvalidStateError: JSWindowActorParent.sendAsyncMessage: JSWindowActorParent cannot send at the moment
+1657974243679	Marionette	INFO	Stopped listening on port 49439
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1657974277111	geckodriver	INFO	Listening on 127.0.0.1:49538
+1657974280476	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "49539" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileSLpqov"
+*** You are running in headless mode.
+1657974281804	Marionette	INFO	Marionette enabled
+1657974281810	Marionette	INFO	Listening on port 49550
+WebDriver BiDi listening on ws://localhost:49539
+Read port: 49550
+1657974282643	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileSLpqov\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49539/devtools/browser/9235a139-c896-45a4-a8f4-31972862a146
+1657974288970	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://www.bcra.gov.ar"

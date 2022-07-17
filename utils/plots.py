@@ -28,10 +28,10 @@ def plot_df_fc(df_plot, dffc_plot):
     fig.update_layout(legend=dict(yanchor="top", y=0.99, xanchor="left", x=0.01))
     fig.add_scatter(x=dffc_plot.index,
                     y=dffc_plot.yhat_lower,
-                    name='pronosticado menor', line={'color': 'green'})
+                    name='pronosticado menor', line={'color': 'pink'})
     fig.add_scatter(x=dffc_plot.index,
                     y=dffc_plot.yhat_upper,
-                    name='pronosticado mayor', line={'color': 'green'})
+                    name='pronosticado mayor', line={'color': 'lightgreen'})
     fig.add_scatter(x=df_plot.index,
                     y=df_plot.y,
                     name='actual', line={'color': 'blue'})

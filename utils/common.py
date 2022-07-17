@@ -1,4 +1,7 @@
 import streamlit as st
+
+import const
+
 from utils.data_ingestion import get_cer_df
 from utils.forecasting import forecast_cer_prophet
 from utils.pre_processing import get_uva_df, resample_df
@@ -34,8 +37,8 @@ def common_dash():
     with st.sidebar:
         st.header("Parámetros")
         option_uva_cer = st.selectbox('¿CER o UVA?', ('CER', 'UVA'))
-        option_delta_years = st.selectbox('Años hacia atrás', range(1, 10), index=0)
-        option_days_ahead = st.select_slider('Días hacia adelante', options=range(1, 366), value=90)
+        option_delta_years = st.selectbox('Años hacia atrás', range(1, 10), index=const.YEARS_BEHIND-1)
+        option_days_ahead = st.select_slider('Días hacia adelante', options=range(1, 366), value=const.DAYS_AHEAD)
 
     return option_uva_cer, option_delta_years, option_days_ahead
 

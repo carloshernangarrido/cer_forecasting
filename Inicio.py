@@ -5,8 +5,11 @@ from utils.pre_processing import get_day_diff
 
 
 if __name__ == '__main__':
-    st.set_page_config(page_title='PronostiCER', layout='wide',
-                       initial_sidebar_state='auto')
+    st.set_page_config(
+        page_icon="👋",
+        page_title='PronostiCER',
+        layout='wide',
+        initial_sidebar_state='auto')
     option_uva_cer, option_delta_years, option_days_ahead = common_dash()
     cer_df, uva_df, cer_df_fc, uva_df_fc, today = common_data(option_delta_years, option_days_ahead)
 

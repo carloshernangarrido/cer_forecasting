@@ -48,6 +48,7 @@ def get_cer_df(url: str = None, delta_years: int = 1):
     fecha_hasta.send_keys(str(pytz.datetime.datetime.today().date().isoformat()))
     boton_buscar = driver.find_element(By.NAME, 'B1')
     boton_buscar.click()
+    driver.implicitly_wait(10)
     table_raw = driver.find_elements(By.TAG_NAME, 'tbody')
     table_raw = [row.text for row in table_raw if validate_date(row.text[0:10])]
     df = pd.DataFrame(columns=['date', 'cer'])

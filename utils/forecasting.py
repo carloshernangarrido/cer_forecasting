@@ -12,7 +12,7 @@ Uses prophet to forecast df a number of days ahead.
     df = df_actual.copy(deep=True)
     df.insert(0, column='ds', value=df.index.map(lambda x: x.replace(tzinfo=None)))
     df.insert(0, column='y', value=df.cer)
-    m = Prophet()
+    m = Prophet(changepoint_range=.95)
     m.fit(df)
     df_future = m.predict(m.make_future_dataframe(periods=days_ahead))
     cer_df_fc = pd.DataFrame(data=None, columns=df_actual.columns,

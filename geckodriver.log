@@ -602,3 +602,528 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 DevTools listening on ws://localhost:49539/devtools/browser/9235a139-c896-45a4-a8f4-31972862a146
 1657974288970	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
 console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://www.bcra.gov.ar"
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+[Parent 7288, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+tte" "--headless" "--remote-debugging-port" "49764" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilehS7Zhb"
+*** You are running in headless mode.
+1657975020338	Marionette	INFO	Marionette enabled
+1657975020345	Marionette	INFO	Listening on port 49773
+Read port: 49773
+WebDriver BiDi listening on ws://localhost:49764
+1657975020996	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilehS7Zhb\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49764/devtools/browser/490b5dbf-59ce-48f5-8d5c-a71701f9f02f
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://www.bcra.gov.ar"
+1657975109933	geckodriver	INFO	Listening on 127.0.0.1:49835
+1657975113005	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "49836" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileMh97FM"
+*** You are running in headless mode.
+1657975114730	Marionette	INFO	Marionette enabled
+1657975114736	Marionette	INFO	Listening on port 49845
+WebDriver BiDi listening on ws://localhost:49836
+Read port: 49845
+1657975115423	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+JavaScript error: resource://gre/modules/Schemas.jsm, line 3662: DataCloneError: The object could not be cloned.
+JavaScript error: moz-extension://91a876d3-c782-48c3-906c-c8850a01f55a/background.js, line 9: InvalidStateError: An exception was thrown
+[GFX1-]: wr_renderer_render: OutOfMemory
+JavaScript error: moz-extension://2b626ea1-7542-4868-80a8-72ec4cd70746/background/startBackground.js, line 63: uncaught exception: out of memory
+JavaScript error: moz-extension://c049f208-72dc-4b11-8949-13b3c458dd04/lib/messaging_helper.js, line 19: TypeError: browser.runtime is undefined
+JavaScript error: moz-extension://c049f208-72dc-4b11-8949-13b3c458dd04/lib/requestStorageAccess_helper.js, line 10: TypeError: browser.runtime is undefined
+JavaScript error: moz-extension://c049f208-72dc-4b11-8949-13b3c458dd04/lib/shims.js, line 17: TypeError: browser.runtime is undefined
+[GFX1-]: Fallback SW-WR + D3D11 to SW-WR
+[GFX1-]: wr_renderer_render: OutOfMemory
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileMh97FM\\search.json.mozlz4", (void 0)))
+[GFX1-]: wr_renderer_render: OutOfMemory
+[GFX1-]: Fallback remains SW-WR
+[GFX1-]: wr_renderer_render: OutOfMemory
+[GFX1-]: wr_renderer_render: OutOfMemory
+out of memory: 0x0000000000100000 bytes requested
+[GFX1-]: Failed to connect WebRenderBridgeChild. isParent=false
+out of memory: 0x0000000000001038 bytes requested
+1657975145067	geckodriver	INFO	Listening on 127.0.0.1:49900
+1657975148133	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "49901" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileUIHsWy"
+*** You are running in headless mode.
+1657975149349	Marionette	INFO	Marionette enabled
+1657975149353	Marionette	INFO	Listening on port 49917
+WebDriver BiDi listening on ws://localhost:49901
+Read port: 49917
+1657975149937	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+out of memory: 0x00000000000000A8 bytes requested
+[GFX1-]: wr_renderer_render: OutOfMemory
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileUIHsWy\\search.json.mozlz4", (void 0)))
+[GFX1-]: Fallback SW-WR + D3D11 to SW-WR
+out of memory: 0x0000000000100000 bytes requested
+1657975190149	geckodriver	INFO	Listening on 127.0.0.1:49984
+1657975193165	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "49987" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilejFyjK1"
+*** You are running in headless mode.
+1657975193706	Marionette	INFO	Marionette enabled
+1657975193711	Marionette	INFO	Listening on port 49998
+WebDriver BiDi listening on ws://localhost:49987
+Read port: 49998
+1657975194348	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+[GFX1-]: wr_renderer_render: OutOfMemory
+[GFX1-]: Fallback SW-WR + D3D11 to SW-WR
+[GFX1-]: wr_renderer_render: OutOfMemory
+[GFX1-]: Fallback remains SW-WR
+[GFX1-]: wr_renderer_render: OutOfMemory
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilejFyjK1\\search.json.mozlz4", (void 0)))
+[GFX1-]: wr_renderer_render: OutOfMemory
+[GFX1-]: wr_renderer_render: OutOfMemory
+out of memory: 0x0000000000100000 bytes requested
+1657975251884	geckodriver	INFO	Listening on 127.0.0.1:50023
+1657975254927	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "50024" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilehPSPLV"
+*** You are running in headless mode.
+1657975255335	Marionette	INFO	Marionette enabled
+1657975255341	Marionette	INFO	Listening on port 50033
+WebDriver BiDi listening on ws://localhost:50024
+Read port: 50033
+1657975255799	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+Hit MOZ_CRASH([unhandlable oom] js::wasm::Init) at /builds/worker/checkouts/gecko/js/src/vm/JSContext.cpp:1265
+out of memory: 0x000000000000C410 bytes requested
+#01: ???[C:\Program Files\Mozilla Firefox\xul.dll +0x456b42c]
+#02: ???[C:\Program Files\Mozilla Firefox\xul.dll +0x151fc]
+#03: ???[C:\Program Files\Mozilla Firefox\xul.dll +0x14bac]
+#04: ???[C:\Program Files\Mozilla Firefox\xul.dll +0x119e0]
+#05: ???[C:\Program Files\Mozilla Firefox\xul.dll +0x12c2422]
+#06: ???[C:\Program Files\Mozilla Firefox\xul.dll +0x9f9eaf]
+#07: ???[C:\Program Files\Mozilla Firefox\xul.dll +0xe5b870]
+#08: ???[C:\Program Files\Mozilla Firefox\xul.dll +0x12c2a41]
+#09: GetNtLoaderAPI[C:\Program Files\Mozilla Firefox\firefox.exe +0x19908]
+#10: IsSandboxedProcess[C:\Program Files\Mozilla Firefox\firefox.exe +0x27a48]
+#11: ???[C:\WINDOWS\System32\KERNEL32.DLL +0x154e0]
+#12: RtlUserThreadStart[C:\WINDOWS\SYSTEM32\ntdll.dll +0x485b]
+1657975306686	geckodriver	INFO	Listening on 127.0.0.1:50066
+1657975309741	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "50067" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileVOt0kl"
+*** You are running in headless mode.
+1657975310366	Marionette	INFO	Marionette enabled
+1657975310370	Marionette	INFO	Listening on port 50076
+WebDriver BiDi listening on ws://localhost:50067
+Read port: 50076
+1657975311124	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileVOt0kl\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50067/devtools/browser/a3954ae6-1822-4266-ba04-b87e4248fe5a
+1657975316528	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://www.bcra.gov.ar"
+out of memory: 0x0000000000001000 bytes requested
+Exiting due to channel error.
+Exiting due to channel error.
+ "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "50123" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilevzNHNS"
+*** You are running in headless mode.
+1657975369255	Marionette	INFO	Marionette enabled
+1657975369259	Marionette	INFO	Listening on port 50132
+WebDriver BiDi listening on ws://localhost:50123
+Read port: 50132
+1657975369917	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilevzNHNS\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50123/devtools/browser/18ecf841-5161-4c0a-b1cc-b38dcee22027
+1657975375226	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://www.bcra.gov.ar"
+1657975444954	geckodriver	INFO	Listening on 127.0.0.1:50188
+1657975447921	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "50189" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileMxfbQ6"
+*** You are running in headless mode.
+1657975449084	Marionette	INFO	Marionette enabled
+1657975449091	Marionette	INFO	Listening on port 50198
+WebDriver BiDi listening on ws://localhost:50189
+Read port: 50198
+1657975449674	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+out of memory: 0x0000000000000080 bytes requested
+out of memory: 0x0000000000000078 bytes requested
+1657975593386	geckodriver	INFO	Listening on 127.0.0.1:50215
+1657975596444	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "50216" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileb68bIK"
+*** You are running in headless mode.
+Hit MOZ_CRASH([unhandlable oom] Failed to allocate new chunk during GC) at /builds/worker/checkouts/gecko/js/src/vm/JSContext.cpp:1265
+### ERROR: SymInitialize: (null)
+#01: ??? (???:???)
+#02: soundtouch::SoundTouch::operator=[C:\Program Files\Mozilla Firefox\xul.dll +0x456b4d8]
+#03: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x1c9146b]
+#04: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x1c8a912]
+#05: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x13a5f6a]
+#06: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x1c749bc]
+#07: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x139688e]
+#08: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x1c6dfeb]
+#09: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x139770f]
+#10: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x1397da6]
+#11: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x139247f]
+#12: soundtouch::SoundTouch::operator=[C:\Program Files\Mozilla Firefox\xul.dll +0x465567d]
+#13: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x1c3d363]
+#14: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x1c18f8b]
+#15: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x1789fc2]
+#16: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x1d86590]
+#17: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x1d7550f]
+#18: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x1538879]
+#19: XRE_GetBootstrap[C:\Program Files\Mozilla Firefox\xul.dll +0x729e5]
+#20: XRE_GetBootstrap[C:\Program Files\Mozilla Firefox\xul.dll +0x728f5]
+#21: workerlz4_compress[C:\Program Files\Mozilla Firefox\xul.dll +0xa20a42]
+#22: XRE_GetBootstrap[C:\Program Files\Mozilla Firefox\xul.dll +0x6fc10]
+#23: workerlz4_compress[C:\Program Files\Mozilla Firefox\xul.dll +0x843648]
+#24: workerlz4_compress[C:\Program Files\Mozilla Firefox\xul.dll +0x840206]
+#25: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x176e953]
+#26: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x17665a3]
+#27: workerlz4_compress[C:\Program Files\Mozilla Firefox\xul.dll +0xa3ca4b]
+#28: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x1c218de]
+#29: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x1d76475]
+#30: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x183ce1d]
+#31: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x17d197f]
+#32: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x1a35159]
+#33: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x17d16a5]
+#34: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x1f2aa29]
+#35: XRE_GetBootstrap[C:\Program Files\Mozilla Firefox\xul.dll +0x1b5f8]
+#36: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x1f47f2b]
+#37: soundtouch::SoundTouch::operator=[C:\Program Files\Mozilla Firefox\xul.dll +0x44b0a5b]
+#38: soundtouch::SoundTouch::operator=[C:\Program Files\Mozilla Firefox\xul.dll +0x44b1edc]
+#39: GIFFT_TimingDistributionCancel[C:\Program Files\Mozilla Firefox\xul.dll +0x1f2e2a3]
+#40: GetNtLoaderAPI[C:\Program Files\Mozilla Firefox\firefox.exe +0x19b7e]
+#41: IsSandboxedProcess[C:\Program Files\Mozilla Firefox\firefox.exe +0x27a48]
+#42: BaseThreadInitThunk[C:\WINDOWS\System32\KERNEL32.DLL +0x154e0]
+#43: ???[C:\WINDOWS\SYSTEM32\ntdll.dll +0x485b]
+1657975630144	geckodriver	INFO	Listening on 127.0.0.1:50227
+1657975633199	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "50228" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileX7RiFq"
+*** You are running in headless mode.
+1657975633603	Marionette	INFO	Marionette enabled
+1657975633608	Marionette	INFO	Listening on port 50237
+WebDriver BiDi listening on ws://localhost:50228
+Read port: 50237
+1657975638848	geckodriver	INFO	Listening on 127.0.0.1:50240
+1657975641911	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "50241" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileMPsX1b"
+*** You are running in headless mode.
+1657975642365	Marionette	INFO	Marionette enabled
+1657975642370	Marionette	INFO	Listening on port 50250
+WebDriver BiDi listening on ws://localhost:50241
+Read port: 50250
+1657975667873	geckodriver	INFO	Listening on 127.0.0.1:50253
+1657975670953	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "50254" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileYb8Z35"
+*** You are running in headless mode.
+1657975671381	Marionette	INFO	Marionette enabled
+1657975671385	Marionette	INFO	Listening on port 50263
+WebDriver BiDi listening on ws://localhost:50254
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+Read port: 50263
+JavaScript error: , line 0: uncaught exception: out of memory
+console.error: "Error during quit-application-granted: out of memory"
+console.error: "Error during quit-application-granted: out of memory"
+console.error: "Error during quit-application-granted: out of memory"
+console.error: "Error during quit-application-granted: out of memory"
+console.error: "Error during quit-application-granted: out of memory"
+console.error: "Error during quit-application-granted: out of memory"
+console.error: "Error during quit-application-granted: out of memory"
+console.error: "Error during quit-application-granted: out of memory"
+console.error: "Error during quit-application-granted: out of memory"
+console.error: "Error during quit-application-granted: out of memory"
+1657975671418	Marionette	INFO	Stopped listening on port 50263
+1657975671424	CDP	WARN	Failed to remove undefined (Could not parse path (undefined): NS_ERROR_FILE_UNRECOGNIZED_PATH)
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Update add-on blocklist state into add-on DB
+          Phase: AddonManager: Waiting to start provider shutdown.
+          State: (none)
+WARNING: out of memory
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Extension shutdown: doh-rollout@mozilla.org
+          Phase: profile-change-teardown
+          State: {"state":""}
+WARNING: out of memory
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Extension shutdown: formautofill@mozilla.org
+          Phase: profile-change-teardown
+          State: {"state":""}
+WARNING: out of memory
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Extension shutdown: pictureinpicture@mozilla.org
+          Phase: profile-change-teardown
+          State: {"state":""}
+WARNING: out of memory
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Extension shutdown: screenshots@mozilla.org
+          Phase: profile-change-teardown
+          State: {"state":""}
+WARNING: out of memory
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  Extension shutdown: webcompat@mozilla.org
+          Phase: profile-change-teardown
+          State: {"state":""}
+WARNING: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  AddonManager: shutting down.
+          Phase: profile-before-change
+          State: [{"name":"AddonManager: Waiting to start provider shutdown.","state":"Complete"},{"name":"AddonManager: Waiting for providers to shut down.","state":"Not started"},{"name":"AddonRepository: async shutdown","state":""}]
+WARNING: out of memory
+console.error: "out of memory"
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+WARNING: A blocker encountered an error while we were waiting.
+          Blocker:  TelemetryController: shutting down
+          Phase: profile-before-change-telemetry
+          State: Error getting state: [Exception... "File error: Not found"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "<unknown>"  data: no] at 
+WARNING: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: NS_ERROR_FILE_NOT_FOUND
+JavaScript error: , line 0: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+1657975676317	geckodriver	INFO	Listening on 127.0.0.1:50267
+1657975679383	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "50268" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilepXjGzb"
+*** You are running in headless mode.
+1657975679791	Marionette	INFO	Marionette enabled
+1657975679795	Marionette	INFO	Listening on port 50277
+WebDriver BiDi listening on ws://localhost:50268
+Read port: 50277
+1657975680353	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+out of memory: 0x0000000000000080 bytes requested
+<jemalloc>: (malloc) Error initializing arena
+out of memory: 0x0000000000000030 bytes requested
+JavaScript error: chrome://browser/content/browser.js, line 340: NS_ERROR_FILE_NOT_FOUND: 
+1657975707939	geckodriver	INFO	Listening on 127.0.0.1:50292
+1657975711001	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50293" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileSuJKhv"
+1657975711669	Marionette	INFO	Marionette enabled
+1657975711674	Marionette	INFO	Listening on port 50302
+WebDriver BiDi listening on ws://localhost:50293
+Read port: 50302
+1657975712899	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileSuJKhv\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50293/devtools/browser/a7ba39e5-74b6-491f-8a46-08a9426afc48
+1657975722007	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://www.bcra.gov.ar"
+JavaScript error: resource://gre/actors/DateTimePickerParent.jsm, line 67: InvalidStateError: JSWindowActorParent.sendAsyncMessage: JSWindowActorParent cannot send at the moment
+out of memory: 0x0000000000007FE8 bytes requested
+Marionette threw an error: TypeError: browsingContext.currentWindowGlobal is null
+getMarionetteCommandsActorProxy/get/<@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:332:29
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1657975746484	Marionette	INFO	Stopped listening on port 50302
+[Parent 5920, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+[Parent 5920, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1657975818653	geckodriver	INFO	Listening on 127.0.0.1:50387
+1657975821771	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50388" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileXFGrdg"
+1657975823485	Marionette	INFO	Marionette enabled
+1657975823499	Marionette	INFO	Listening on port 50397
+WebDriver BiDi listening on ws://localhost:50388
+Read port: 50397
+1657975824249	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileXFGrdg\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50388/devtools/browser/d6e27019-8fdd-483c-b2e9-798bdfcd31de
+1657975832562	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:234:19
+TimedPromise@chrome://remote/content/marionette/sync.js:219:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://www.bcra.gov.ar"
+out of memory: 0x0000000000000078 bytes requested
+Marionette threw an error: TypeError: browsingContext.currentWindowGlobal is null
+getMarionetteCommandsActorProxy/get/<@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:332:29
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1657975841038	Marionette	INFO	Stopped listening on port 50397
+[Parent 9528, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+[Parent 9528, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1657977760909	geckodriver	INFO	Listening on 127.0.0.1:50629
+1657977763976	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "50630" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileQa2oEW"
+*** You are running in headless mode.
+1657977765265	Marionette	INFO	Marionette enabled
+1657977765269	Marionette	INFO	Listening on port 50639
+WebDriver BiDi listening on ws://localhost:50630
+Read port: 50639
+1657977765936	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileQa2oEW\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50630/devtools/browser/88964945-fbf2-4d7f-9c95-dc097e8070ed
+1657977771902	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://www.bcra.gov.ar"
+1657977816613	geckodriver	INFO	Listening on 127.0.0.1:50701
+1657977819652	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "50702" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileBIE0id"
+*** You are running in headless mode.
+1657977820181	Marionette	INFO	Marionette enabled
+1657977820185	Marionette	INFO	Listening on port 50711
+WebDriver BiDi listening on ws://localhost:50702
+Read port: 50711
+1657977820726	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileBIE0id\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50702/devtools/browser/acafdef8-7509-4711-9f58-61815231e59d
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://www.bcra.gov.ar"
+[Parent 16896, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+ram Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "50776" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilewq75kv"
+*** You are running in headless mode.
+1657978029165	Marionette	INFO	Marionette enabled
+1657978029174	Marionette	INFO	Listening on port 50785
+WebDriver BiDi listening on ws://localhost:50776
+Read port: 50785
+1657978029834	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilewq75kv\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50776/devtools/browser/2df29f7a-ed96-4743-939b-eb4d5ccbb135
+1657978035750	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://www.bcra.gov.ar"
+[Parent 13176, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1657978049781	geckodriver	INFO	Listening on 127.0.0.1:50835
+1657978052778	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "50836" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilerf8UFM"
+*** You are running in headless mode.
+1657978054993	Marionette	INFO	Marionette enabled
+1657978055004	Marionette	INFO	Listening on port 50845
+WebDriver BiDi listening on ws://localhost:50836
+Read port: 50845
+1657978056065	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilerf8UFM\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50836/devtools/browser/d835ddac-bd9a-4713-8f15-4481ba1f79aa
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://www.bcra.gov.ar"
+1657978064823	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:234:19
+TimedPromise@chrome://remote/content/marionette/sync.js:219:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+out of memory: 0x0000000000001000 bytes requested
+Marionette threw an error: TypeError: browsingContext.currentWindowGlobal is null
+getMarionetteCommandsActorProxy/get/<@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:332:29
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1657978084455	Marionette	INFO	Stopped listening on port 50845
+[Parent 608, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+[Parent 608, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1657978281057	geckodriver	INFO	Listening on 127.0.0.1:50968
+1657978284085	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "50969" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileRXl4Rg"
+*** You are running in headless mode.
+1657978285170	Marionette	INFO	Marionette enabled
+1657978285181	Marionette	INFO	Listening on port 50985
+WebDriver BiDi listening on ws://localhost:50969
+Read port: 50985
+1657978286234	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileRXl4Rg\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 767))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+DevTools listening on ws://localhost:50969/devtools/browser/6894ab22-620f-4d65-bfde-36cd88ef50a2
+JavaScript error: resource://activity-stream/lib/ActivityStream.jsm, line 584: NS_ERROR_FILE_NOT_FOUND
+JavaScript error: , line 0: uncaught exception: out of memory
+1657978327151	geckodriver	INFO	Listening on 127.0.0.1:51047
+1657978330227	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "51048" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileNzEdhn"
+*** You are running in headless mode.
+1657978330987	Marionette	INFO	Marionette enabled
+1657978330994	Marionette	INFO	Listening on port 51057
+WebDriver BiDi listening on ws://localhost:51048
+Read port: 51057
+Read port: 51057
+1657978333000	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileNzEdhn\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51048/devtools/browser/237acc03-352f-4aef-9b40-8341e943220b
+1657978336636	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://www.bcra.gov.ar"
+1657978414327	geckodriver	INFO	Listening on 127.0.0.1:51163
+1657978417392	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "51164" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileJLdFM8"
+*** You are running in headless mode.
+1657978417983	Marionette	INFO	Marionette enabled
+1657978417992	Marionette	INFO	Listening on port 51173
+WebDriver BiDi listening on ws://localhost:51164
+Read port: 51173
+1657978418617	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileJLdFM8\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51164/devtools/browser/eaf4126c-c886-43ba-8cdd-8f7e5b5e878f
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://www.bcra.gov.ar"
+1657978458999	geckodriver	INFO	Listening on 127.0.0.1:51220
+1657978462029	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "51221" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileSgRAOT"
+*** You are running in headless mode.
+1657978462472	Marionette	INFO	Marionette enabled
+1657978462477	Marionette	INFO	Listening on port 51231
+WebDriver BiDi listening on ws://localhost:51221
+Read port: 51231
+1657978463135	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileSgRAOT\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51221/devtools/browser/37d021a0-d912-4a65-8022-c04820b2fc14
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://www.bcra.gov.ar"
+1657978506737	geckodriver	INFO	Listening on 127.0.0.1:51284
+1657978509783	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "51285" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilesU6ODq"
+*** You are running in headless mode.
+1657978510218	Marionette	INFO	Marionette enabled
+1657978510222	Marionette	INFO	Listening on port 51294
+WebDriver BiDi listening on ws://localhost:51285
+Read port: 51294
+1657978511025	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofilesU6ODq\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51285/devtools/browser/81d3c87a-d51e-4557-ada9-49498414bd0c
+1657978516455	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://www.bcra.gov.ar"
+1657978604587	geckodriver	INFO	Listening on 127.0.0.1:51350
+1657978607620	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "51351" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofiletfVSBZ"
+*** You are running in headless mode.
+1657978609022	Marionette	INFO	Marionette enabled
+1657978609028	Marionette	INFO	Listening on port 51361
+WebDriver BiDi listening on ws://localhost:51351
+Read port: 51361
+1657978609632	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource:///modules/sessionstore/ContentSessionStore.jsm, line 143: uncaught exception: out of memory
+JavaScript error: , line 0: uncaught exception: out of memory
+out of memory: 0x0000000000006000 bytes requested
+JavaScript error: chrome://remote/content/cdp/targets/TabTarget.jsm, line 31: uncaught exception: out of memory
+out of memory: 0x0000000000000098 bytes requested
+1657978670117	geckodriver	INFO	Listening on 127.0.0.1:51410
+1657978673180	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "51411" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileDoXJ5R"
+*** You are running in headless mode.
+1657978673576	Marionette	INFO	Marionette enabled
+1657978673580	Marionette	INFO	Listening on port 51420
+WebDriver BiDi listening on ws://localhost:51411
+Read port: 51420
+1657978674208	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileDoXJ5R\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51411/devtools/browser/c649a2c4-0c7e-495c-a1db-426a07d8e15a
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://www.bcra.gov.ar"
+[Parent 1068, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+gram Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "51470" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofile1MwSnO"
+*** You are running in headless mode.
+1657978713235	Marionette	INFO	Marionette enabled
+1657978713241	Marionette	INFO	Listening on port 51479
+WebDriver BiDi listening on ws://localhost:51470
+Read port: 51479
+1657978713900	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofile1MwSnO\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51470/devtools/browser/5c3194c4-1a1b-4eb5-944b-745093e75331
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://www.bcra.gov.ar"
+1657978783567	geckodriver	INFO	Listening on 127.0.0.1:51537
+1657978786619	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "51538" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileMTVcBd"
+*** You are running in headless mode.
+1657978787029	Marionette	INFO	Marionette enabled
+1657978787033	Marionette	INFO	Listening on port 51547
+WebDriver BiDi listening on ws://localhost:51538
+Read port: 51547
+1657978787703	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofileMTVcBd\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51538/devtools/browser/c24b9c0d-dde5-4b43-ab6d-da7bb31975a2
+1657978793442	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://www.bcra.gov.ar"

@@ -1,7 +1,14 @@
+STREAMLIT
 - run dashboard server locally
     streamlit run main.py
+
+DEPENDENCIES
 - update requirements file after installing something
     pip freeze > requirements.txt
     pip install -r requirements.txt
+
+GIT
 - create a new branch and checkout to it
     git checkout -b my_new_branch
+- untrack tracked file
+    git rm file_name --cached

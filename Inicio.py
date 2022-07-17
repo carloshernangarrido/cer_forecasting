@@ -1,5 +1,4 @@
 import streamlit as st
-
 from utils.common import common_data, common_dash
 from utils.plots import plot_df_fc, df2plot
 from utils.pre_processing import get_day_diff

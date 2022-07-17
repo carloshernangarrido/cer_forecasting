@@ -28,7 +28,8 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 767))
 console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/module1657926660186	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'1657926660221	Marionette	WARN	Ignoring event 'DOMContentLoaded'JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
 JavaScript error: , line 0: NotFoundError: Could not move source file(C:\Users\joses\AppData\Local\Temp\rust_mozprofileojafUK\bookmarkbackups\bookmarks-2022-07-15_11_3PNJ5yTPcQWvmh8-meGUIw==.jsonlz4) because it does not exist
-ote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofiledFD6Ti"
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+ "C:\\Users\\joses\\AppData\\Local\\Temp\\rust_mozprofiledFD6Ti"
 1657926780810	Marionette	INFO	Marionette enabled
 1657926780815	Marionette	INFO	Listening on port 61460
 WebDriver BiDi listening on ws://localhost:61442

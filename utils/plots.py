@@ -38,4 +38,10 @@ def plot_df_fc(df_plot, dffc_plot):
     fig.add_scatter(x=dffc_plot.index,
                     y=dffc_plot.yhat,
                     name='pronosticado', line={'color': 'red'})
+    fig.update_layout(legend=dict(
+        yanchor="bottom",
+        y=0.01,
+        xanchor="left",
+        x=0.01
+    ))
     return fig

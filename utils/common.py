@@ -46,7 +46,7 @@ def common_dash():
 def common_data(option_delta_years, option_days_ahead):
     cer_df_ = cached_get_cer_df(delta_years=option_delta_years)
     cer_df_ = cer_df_.copy(deep=True)
-    cer_df = resample_df(cer_df=cer_df_)
+    cer_df = cached_resample_df(cer_df=cer_df_)
     uva_df = get_uva_df(cer_df)
 
     cer_df_fc = forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead)

@@ -62,11 +62,14 @@ def common_data(option_delta_years, option_days_ahead, origin):
         cer_df = ingest(option_delta_years)
     elif origin == 'local':
         print('>> reading local because user required')
-        cer_df = pd.read_pickle('cer_df.pickle')
+        try:
+            cer_df = pd.read_pickle('cer_df.pickle')
+        except FileNotFoundError():
+            print('>> ingesting because file was not found')
+            cer_df = ingest(option_delta_years)
     elif origin == 'auto':
         try:
             local_date = dt.datetime.fromtimestamp(pathlib.Path('cer_df.pickle').stat().st_mtime)
-            print(local_date.date(), dt.datetime.today().date())
             if local_date.date() == dt.datetime.today().date():
                 print('>> reading local')
                 cer_df = pd.read_pickle('cer_df.pickle')

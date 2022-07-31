@@ -58,8 +58,10 @@ def ingest(option_delta_years):
 def common_data(option_delta_years, option_days_ahead, origin):
     print('***')
     if origin == 'ingest':
+        print(f'>> ingesting because user required')
         cer_df = ingest(option_delta_years)
     elif origin == 'local':
+        print('>> reading local because user required')
         cer_df = pd.read_pickle('cer_df.pickle')
     elif origin == 'auto':
         try:

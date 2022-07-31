@@ -6,8 +6,8 @@ from utils.pre_processing import get_uva_df, get_day_diff
 
 
 if __name__ == '__main__':
-    option_uva_cer, option_delta_years, option_days_ahead = common_dash()
-    cer_df, uva_df, cer_df_fc, uva_df_fc, today = common_data(option_delta_years, option_days_ahead)
+    option_uva_cer, option_delta_years, option_days_ahead, option_origin = common_dash()
+    cer_df, uva_df, cer_df_fc, uva_df_fc, today = common_data(option_delta_years, option_days_ahead, option_origin)
 
     date_val = (today - dt.timedelta(days=option_days_ahead))
     cer_df_val = cer_df[:date_val]

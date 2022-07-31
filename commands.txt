@@ -3,9 +3,13 @@ STREAMLIT
     streamlit run main.py
 
 DEPENDENCIES
+- upgrade pip
+    python.exe -m pip install --upgrade pip
 - update requirements file after installing something
     pip freeze > requirements.txt
     pip install -r requirements.txt
+- upgrade some package
+    pip install package --upgrade
 
 GIT
 - create a new branch and checkout to it

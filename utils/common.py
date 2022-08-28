@@ -5,7 +5,7 @@ import streamlit as st
 import const
 import pandas as pd
 import datetime as dt
-from utils.data_ingestion import get_cer_df
+from utils.data_ingestion import get_cer_df, get_dolar_blue_df
 from utils.forecasting import forecast_cer_prophet
 from utils.pre_processing import get_uva_df, resample_df
 
@@ -47,7 +47,7 @@ def common_dash():
     return option_uva_cer, option_delta_years, option_days_ahead, option_origin
 
 
-def ingest(option_delta_years):
+def ingest_cer(option_delta_years):
     cer_df_ = cached_get_cer_df(delta_years=option_delta_years)
     cer_df_ = cer_df_.copy(deep=True)
     cer_df = cached_resample_df(cer_df=cer_df_)
@@ -55,18 +55,27 @@ def ingest(option_delta_years):
     return cer_df
 
 
+def ingest_dolar_blue(option_delta_years):
+    dolar_blue_df_ = get_dolar_blue_df(delta_years=option_delta_years)
+    dolar_blue_df_ = dolar_blue_df_.copy(deep=True)
+    st.dataframe(dolar_blue_df_)
+    dolar_blue_df = resample_df(cer_df=dolar_blue_df_)
+    dolar_blue_df.to_pickle('dolar_blue_df.pickle')
+    return dolar_blue_df
+
+
 def common_data(option_delta_years, option_days_ahead, origin):
-    print('***')
+    print('*** CER / UVA ***')
     if origin == 'ingest':
         print(f'>> ingesting because user required')
-        cer_df = ingest(option_delta_years)
+        cer_df = ingest_cer(option_delta_years)
     elif origin == 'local':
         print('>> reading local because user required')
         try:
             cer_df = pd.read_pickle('cer_df.pickle')
         except FileNotFoundError():
             print('>> ingesting because file was not found')
-            cer_df = ingest(option_delta_years)
+            cer_df = ingest_cer(option_delta_years)
     elif origin == 'auto':
         try:
             local_date = dt.datetime.fromtimestamp(pathlib.Path('cer_df.pickle').stat().st_mtime)
@@ -76,18 +85,50 @@ def common_data(option_delta_years, option_days_ahead, origin):
                 if cer_df.index[-1].year - cer_df.index[0].year != option_delta_years:
                     print(f'>> ingesting because delta_years_local = {cer_df.index[-1].year - cer_df.index[0].year}, '
                           f'and option_delta_years = {option_delta_years}')
-                    cer_df = ingest(option_delta_years)
+                    cer_df = ingest_cer(option_delta_years)
             else:
                 print('>> ingesting because file is old')
-                cer_df = ingest(option_delta_years)
+                cer_df = ingest_cer(option_delta_years)
         except FileNotFoundError:
             print('>> ingesting because file was not found')
-            cer_df = ingest(option_delta_years)
+            cer_df = ingest_cer(option_delta_years)
     else:
-        raise ValueError('origin must be ingest, local, or auto')
+        raise ValueError('origin must be ingest_cer, local, or auto')
 
     today = cer_df.index[-1]
     uva_df = get_uva_df(cer_df)
     cer_df_fc = forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead)
     uva_df_fc = get_uva_df(cer_df_fc)
-    return cer_df, uva_df, cer_df_fc, uva_df_fc, today
+
+    print('*** Dólar Blue ***')
+    if origin == 'ingest':
+        print(f'>> ingesting because user required')
+        dolar_blue_df = ingest_dolar_blue(option_delta_years)
+    elif origin == 'local':
+        print('>> reading local because user required')
+        try:
+            dolar_blue_df = pd.read_pickle('dolar_blue_df.pickle')
+        except FileNotFoundError():
+            print('>> ingesting because file was not found')
+            dolar_blue_df = ingest_dolar_blue(option_delta_years)
+    elif origin == 'auto':
+        try:
+            local_date = dt.datetime.fromtimestamp(pathlib.Path('dolar_blue_df.pickle').stat().st_mtime)
+            if local_date.date() == dt.datetime.today().date():
+                print('>> reading local')
+                dolar_blue_df = pd.read_pickle('dolar_blue_df.pickle')
+                if dolar_blue_df.index[-1].year - dolar_blue_df.index[0].year != option_delta_years:
+                    print(f'>> ingesting because delta_years_local = '
+                          f'{dolar_blue_df.index[-1].year - dolar_blue_df.index[0].year}, '
+                          f'and option_delta_years = {option_delta_years}')
+                    dolar_blue_df = ingest_dolar_blue(option_delta_years)
+            else:
+                print('>> ingesting because file is old')
+                dolar_blue_df = ingest_dolar_blue(option_delta_years)
+        except FileNotFoundError:
+            print('>> ingesting because file was not found')
+            dolar_blue_df = ingest_dolar_blue(option_delta_years)
+    else:
+        raise ValueError('origin must be ingest_cer, local, or auto')
+
+    return cer_df, uva_df, cer_df_fc, uva_df_fc, today, dolar_blue_df

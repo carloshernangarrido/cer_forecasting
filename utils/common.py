@@ -58,14 +58,13 @@ def ingest_cer(option_delta_years):
 def ingest_dolar_blue(option_delta_years):
     dolar_blue_df_ = get_dolar_blue_df(delta_years=option_delta_years)
     dolar_blue_df_ = dolar_blue_df_.copy(deep=True)
-    st.dataframe(dolar_blue_df_)
     dolar_blue_df = resample_df(cer_df=dolar_blue_df_)
     dolar_blue_df.to_pickle('dolar_blue_df.pickle')
     return dolar_blue_df
 
 
 def common_data(option_delta_years, option_days_ahead, origin):
-    print('*** CER / UVA ***')
+    print('\n*** CER / UVA ***')
     if origin == 'ingest':
         print(f'>> ingesting because user required')
         cer_df = ingest_cer(option_delta_years)
@@ -100,7 +99,7 @@ def common_data(option_delta_years, option_days_ahead, origin):
     cer_df_fc = forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead)
     uva_df_fc = get_uva_df(cer_df_fc)
 
-    print('*** Dólar Blue ***')
+    print('\n*** Dólar Blue ***')
     if origin == 'ingest':
         print(f'>> ingesting because user required')
         dolar_blue_df = ingest_dolar_blue(option_delta_years)

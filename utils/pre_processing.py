@@ -17,6 +17,7 @@ def get_uva_df(cer_df):
 
 
 def resample_df(cer_df):
+    cer_df = cer_df.groupby(cer_df.index).mean()
     cer_df = cer_df.drop_duplicates(keep='first').resample(rule='D').ffill()
     return cer_df
 

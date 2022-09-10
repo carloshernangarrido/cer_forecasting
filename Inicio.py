@@ -11,7 +11,8 @@ if __name__ == '__main__':
         layout='wide',
         initial_sidebar_state='auto')
     option_uva_cer, option_delta_years, option_days_ahead, option_origin = common_dash()
-    cer_df, uva_df, cer_df_fc, uva_df_fc, today, dolar_blue_df = common_data(option_delta_years, option_days_ahead, option_origin)
+    cer_df, uva_df, cer_df_fc, uva_df_fc, today, dolar_blue_df = common_data(option_delta_years, option_days_ahead,
+                                                                             option_origin)
 
     st.header(f"Datos pronosticados de {option_uva_cer}")
     with st.expander(label="Valores", expanded=True):
@@ -36,6 +37,7 @@ if __name__ == '__main__':
     with st.expander(label="Valores", expanded=True):
         st.subheader('Valores')
         st.dataframe(dolar_blue_df)
+        st.dataframe(cer_df)
         # df_plot, df_fc_plot = df2plot(cer_df if option_uva_cer == 'CER' else uva_df,
         #                               cer_df_fc if option_uva_cer == 'CER' else uva_df_fc)
         # fig_val = plot_df_fc(df_plot=df_plot, dffc_plot=df_fc_plot)

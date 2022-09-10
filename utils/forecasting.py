@@ -24,3 +24,25 @@ Uses prophet to forecast df a number of days ahead.
     cer_df_fc.insert(1, column='cer_lower', value=df_future['yhat_lower'].values)
     cer_df_fc.insert(2, column='cer_upper', value=df_future['yhat_upper'].values)
     return cer_df_fc
+
+
+def forecast_dolar_blue_prophet(df_actual: pd.DataFrame, days_ahead: int = 1):
+    """
+Uses prophet to forecast df a number of days ahead.
+    :param df_actual: data frame containing actual data
+    :param days_ahead: Number of days to forecast.
+    :return: data frame containing actual and forecasted data
+    """
+    df = df_actual.copy(deep=True)
+    df.insert(0, column='ds', value=df.index.map(lambda x: x.replace(tzinfo=None)))
+    df.insert(0, column='y', value=df.venta)
+    m = Prophet()
+    m.fit(df)
+    df_future = m.predict(m.make_future_dataframe(periods=days_ahead))
+    dolar_blue_df_fc = pd.DataFrame(data=None, columns=df_actual.columns,
+                                    index=df_future['ds'].map(lambda x: x.replace(tzinfo=df_actual.index[0].tzinfo)))
+    dolar_blue_df_fc.index.freq, dolar_blue_df_fc.index.name = 'D', 'date'
+    dolar_blue_df_fc['venta'] = df_future['yhat'].values
+    dolar_blue_df_fc.insert(1, column='venta_lower', value=df_future['yhat_lower'].values)
+    dolar_blue_df_fc.insert(2, column='venta_upper', value=df_future['yhat_upper'].values)
+    return dolar_blue_df_fc

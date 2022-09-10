@@ -6,7 +6,7 @@ import const
 import pandas as pd
 import datetime as dt
 from utils.data_ingestion import get_cer_df, get_dolar_blue_df
-from utils.forecasting import forecast_cer_prophet
+from utils.forecasting import forecast_cer_prophet, forecast_dolar_blue_prophet
 from utils.pre_processing import get_uva_df, resample_df
 
 
@@ -130,4 +130,6 @@ def common_data(option_delta_years, option_days_ahead, origin):
     else:
         raise ValueError('origin must be ingest_cer, local, or auto')
 
-    return cer_df, uva_df, cer_df_fc, uva_df_fc, today, dolar_blue_df
+    dolar_blue_df_fc = forecast_dolar_blue_prophet(df_actual=dolar_blue_df, days_ahead=option_days_ahead)
+
+    return cer_df, uva_df, cer_df_fc, uva_df_fc, today, dolar_blue_df, dolar_blue_df_fc

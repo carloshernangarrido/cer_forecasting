@@ -18,7 +18,7 @@ def cached_get_cer_df(**kwargs):
 
 @st.cache
 def cached_resample_df(**kwargs):
-    return resample_df(cer_df=kwargs['cer_df'])
+    return resample_df(df=kwargs['df'])
 
 
 @st.cache
@@ -50,7 +50,7 @@ def common_dash():
 def ingest_cer(option_delta_years):
     cer_df_ = cached_get_cer_df(delta_years=option_delta_years)
     cer_df_ = cer_df_.copy(deep=True)
-    cer_df = cached_resample_df(cer_df=cer_df_)
+    cer_df = cached_resample_df(df=cer_df_)
     cer_df.to_pickle('cer_df.pickle')
     return cer_df
 
@@ -58,7 +58,7 @@ def ingest_cer(option_delta_years):
 def ingest_dolar_blue(option_delta_years):
     dolar_blue_df_ = get_dolar_blue_df(delta_years=option_delta_years)
     dolar_blue_df_ = dolar_blue_df_.copy(deep=True)
-    dolar_blue_df = resample_df(cer_df=dolar_blue_df_)
+    dolar_blue_df = resample_df(df=dolar_blue_df_)
     dolar_blue_df.to_pickle('dolar_blue_df.pickle')
     return dolar_blue_df
 

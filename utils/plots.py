@@ -8,6 +8,8 @@ def df2plot(df, dffc):
         df_plot.rename(columns={'cer': 'y'}, inplace=True)
     elif 'uva' in df.columns:
         df_plot.rename(columns={'uva': 'y'}, inplace=True)
+    elif 'venta' in df.columns:
+        df_plot.rename(columns={'venta': 'y'}, inplace=True)
     else:
         raise ValueError
     if 'cer' in dffc_plot.columns:
@@ -18,6 +20,10 @@ def df2plot(df, dffc):
         dffc_plot.rename(columns={'uva': 'yhat',
                                   'uva_upper': 'yhat_upper',
                                   'uva_lower': 'yhat_lower'}, inplace=True)
+    elif 'venta' in dffc_plot.columns:
+        dffc_plot.rename(columns={'venta': 'yhat',
+                                  'venta_upper': 'yhat_upper',
+                                  'venta_lower': 'yhat_lower'}, inplace=True)
     else:
         raise ValueError
     return df_plot, dffc_plot

@@ -1,6 +1,6 @@
 STREAMLIT
 - run dashboard server locally
-    streamlit run main.py
+    streamlit run Inicio.py
 
 DEPENDENCIES
 - upgrade pip

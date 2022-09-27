@@ -1,8 +1,11 @@
+from time import sleep
+
 import pytz
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
 from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.firefox.service import Service
@@ -65,11 +68,65 @@ def get_cer_df(url: str = None, delta_years: int = 1):
     return df
 
 
-# def get_dolar_blue_df(url: str = None, delta_years: int = 1):
-#     """
-#     Gets a table from the web page of https://www.ambito.com/contenidos/dolar-informal-historico.html.
-#     :param url: url where data can be found
-#     :param delta_years: number of years of data from now (backforwards)
-#     """
-#     if url is None:
-#         url = "https://www.ambito.com/contenidos/dolar-informal-historico.html"
+def get_dolar_blue_df(url: str = None, delta_years: int = 10):
+    """
+    Gets a table from the web page of https://www.ambito.com/contenidos/dolar-informal-historico.html.
+    :param url: url where data can be found
+    :param delta_years: number of years of data from now (backforwards)
+    """
+    if url is None:
+        url = "https://www.ambito.com/contenidos/dolar-informal-historico.html"
+    firefoxoptions = Options()
+    firefoxoptions.add_argument("--headless")
+    service = Service(GeckoDriverManager().install())
+    driver = webdriver.Firefox(
+        options=firefoxoptions,
+        service=service,
+    )
+    driver.get(url)
+    fecha_desde = driver.find_element(By.CSS_SELECTOR, "input[class='datepicker desde form-control']")
+    wait = WebDriverWait(driver, 2)
+    wait.until(lambda d: fecha_desde.is_displayed())
+    fecha_desde.click()
+    fecha_desde.clear()
+    for i in range(10):
+        fecha_desde.send_keys(Keys.BACK_SPACE)
+    driver.implicitly_wait(1)
+    fecha_keys = (pytz.datetime.datetime.today().date() - dt.timedelta(days=delta_years*365)).strftime('%d-%m-%Y')
+    fecha_desde.send_keys(fecha_keys)
+    driver.implicitly_wait(1)
+    fecha_desde.send_keys(Keys.ENTER)
+    driver.implicitly_wait(1)
+    fecha_hasta = driver.find_element(By.CSS_SELECTOR, "input[class='datepicker hasta form-control']")
+    wait = WebDriverWait(driver, 2)
+    wait.until(lambda d: fecha_hasta.is_displayed())
+    fecha_hasta.click()
+    fecha_hasta.clear()
+    for i in range(10):
+        fecha_hasta.send_keys(Keys.BACK_SPACE)
+    fecha_keys = pytz.datetime.datetime.today().date().strftime('%d-%m-%Y')
+    fecha_hasta.send_keys(fecha_keys)
+    fecha_desde.send_keys(Keys.ENTER)
+    boton_buscar = driver.find_element(By.CSS_SELECTOR, "button[class='boton']")
+    wait = WebDriverWait(driver, 2)
+    wait.until(lambda d: boton_buscar.is_displayed())
+    boton_buscar.click()
+    sleep(1)
+    # driver.implicitly_wait(10)
+    table_raw = driver.find_elements(By.TAG_NAME, 'tbody')
+    table_raw = table_raw[0].text.split('\n')
+    # print(table_raw)
+    df = pd.DataFrame(columns=['date', 'compra', 'venta'])
+    df['date'] = [
+        pytz.timezone('America/Argentina/Mendoza').localize(pytz.datetime.datetime.strptime(row[0:10], "%d-%m-%Y"))
+        for row in table_raw]
+    df['compra'] = [float(row.split(' ')[1].replace(',', '.')) for row in table_raw]
+    df['venta'] = [float(row.split(' ')[2].replace(',', '.')) for row in table_raw]
+    driver.implicitly_wait(1)
+    driver.quit()
+
+    df.set_index(keys=df['date'], inplace=True)
+    df.drop(columns=['date'], inplace=True)
+
+    return df
+

@@ -32,15 +32,15 @@ def cached_forecast_dolar_blue_prophet(**kwargs):
 
 
 def common_dash():
-    # st.markdown(""" <style>
-    # #MainMenu {visibility: hidden;}
-    # footer {visibility: hidden;}
-    # </style> """, unsafe_allow_html=True)
+    st.markdown(""" <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    </style> """, unsafe_allow_html=True)
     st.markdown(""" <style>
     footer {visibility: hidden;}
     </style> """, unsafe_allow_html=True)
 
-    st.title("Visualizador y pronosticador de CER y UVA")
+    st.title("Visualizador y pronosticador de CER, UVA y Dólar Blue")
 
     with st.sidebar:
         st.header("Parámetros")

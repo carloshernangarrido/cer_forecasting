@@ -51,3 +51,42 @@ def plot_df_fc(df_plot, dffc_plot):
         x=0.01
     ))
     return fig
+
+
+def plot_comp(uva_df_plot, uva_df_fc_plot, today, dolar_blue_df_plot, dolar_blue_df_fc_plot):
+    fig = go.Figure()
+    fig.update_layout(legend=dict(yanchor="top", y=0.99, xanchor="left", x=0.01))
+
+    fig.add_scatter(x=uva_df_fc_plot.index,
+                    y=uva_df_fc_plot.yhat_lower / uva_df_fc_plot.yhat[today],
+                    name='uva pronosticado menor', line={'color': 'pink'})
+    fig.add_scatter(x=uva_df_fc_plot.index,
+                    y=uva_df_fc_plot.yhat_upper / uva_df_fc_plot.yhat[today],
+                    name='uva pronosticado mayor', line={'color': 'pink'})
+    fig.add_scatter(x=uva_df_plot.index,
+                    y=uva_df_plot.y / uva_df_fc_plot.yhat[today],
+                    name='uva actual', line={'color': 'red'})
+    fig.add_scatter(x=uva_df_fc_plot.index,
+                    y=uva_df_fc_plot.yhat / uva_df_fc_plot.yhat[today],
+                    name='uva pronosticado', line={'color': 'orange'})
+
+    fig.add_scatter(x=dolar_blue_df_fc_plot.index,
+                    y=dolar_blue_df_fc_plot.yhat_lower / dolar_blue_df_fc_plot.yhat[today],
+                    name='dólar blue pronosticado menor', line={'color': '#2ca02c'})
+    fig.add_scatter(x=dolar_blue_df_fc_plot.index,
+                    y=dolar_blue_df_fc_plot.yhat_upper / dolar_blue_df_fc_plot.yhat[today],
+                    name='dólar blue pronosticado mayor', line={'color': '#2ca02c'})
+    fig.add_scatter(x=dolar_blue_df_plot.index,
+                    y=dolar_blue_df_plot.y / dolar_blue_df_fc_plot.yhat[today],
+                    name='dólar blue actual', line={'color': 'green'})
+    fig.add_scatter(x=dolar_blue_df_fc_plot.index,
+                    y=dolar_blue_df_fc_plot.yhat / dolar_blue_df_fc_plot.yhat[today],
+                    name='dólar blue pronosticado', line={'color': 'blue'})
+
+    fig.update_layout(legend=dict(
+        yanchor="bottom",
+        y=0.01,
+        xanchor="left",
+        x=0.01
+    ))
+    return fig

@@ -1,6 +1,6 @@
 import streamlit as st
 from utils.common import common_data, common_dash
-from utils.plots import plot_df_fc, df2plot
+from utils.plots import plot_df_fc, df2plot, plot_comp
 from utils.pre_processing import get_day_diff
 
 
@@ -13,6 +13,17 @@ if __name__ == '__main__':
     option_uva_cer, option_delta_years, option_days_ahead, option_origin = common_dash()
     cer_df, uva_df, cer_df_fc, uva_df_fc, today, dolar_blue_df, dolar_blue_df_fc = \
         common_data(option_delta_years, option_days_ahead, option_origin)
+
+    with st.expander(label="Comparación UVA vs Dólar Blue", expanded=True):
+        st.subheader('Comparación UVA vs Dólar Blue')
+        uva_df_plot, uva_df_fc_plot = df2plot(uva_df, uva_df_fc)
+        dolar_blue_df_plot, dolar_blue_df_fc_plot = df2plot(dolar_blue_df,
+                                                            dolar_blue_df_fc)
+        fig = plot_comp(uva_df_plot, uva_df_fc_plot, today, dolar_blue_df_plot, dolar_blue_df_fc_plot)
+        fig.add_vline(x=today)
+        fig.add_annotation(x=today, y=1, text=f'hoy UVA={round(uva_df_plot.loc[today]["y"])}, '
+                                              f'dólar blue={round(dolar_blue_df_plot.loc[today]["y"])}')
+        st.plotly_chart(fig, use_container_width=True)
 
     st.header(f"Datos pronosticados de {option_uva_cer}")
     with st.expander(label="Valores", expanded=True):

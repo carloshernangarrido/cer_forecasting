@@ -1,3 +1,5 @@
 venv
 secret.txt
 geckodriver.log
+cer_df.pickle
+dolar_blue_df.pickle

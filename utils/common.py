@@ -26,6 +26,11 @@ def cached_forecast_cer_prophet(**kwargs):
     return forecast_cer_prophet(df_actual=kwargs['df_actual'], days_ahead=kwargs['days_ahead'])
 
 
+@st.cache
+def cached_forecast_dolar_blue_prophet(**kwargs):
+    return forecast_dolar_blue_prophet(df_actual=kwargs['df_actual'], days_ahead=kwargs['days_ahead'])
+
+
 def common_dash():
     # st.markdown(""" <style>
     # #MainMenu {visibility: hidden;}
@@ -63,7 +68,7 @@ def ingest_dolar_blue(option_delta_years):
     return dolar_blue_df
 
 
-def common_data(option_delta_years, option_days_ahead, origin):
+def common_data(option_delta_years, option_days_ahead, origin, forecast=True):
     print('\n*** CER / UVA ***')
     if origin == 'ingest':
         print(f'>> ingesting because user required')
@@ -96,8 +101,12 @@ def common_data(option_delta_years, option_days_ahead, origin):
 
     today = cer_df.index[-1]
     uva_df = get_uva_df(cer_df)
-    cer_df_fc = forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead)
-    uva_df_fc = get_uva_df(cer_df_fc)
+    if forecast:
+        cer_df_fc = cached_forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead)
+        uva_df_fc = get_uva_df(cer_df_fc)
+    else:
+        cer_df_fc = None
+        uva_df_fc = None
 
     print('\n*** Dólar Blue ***')
     if origin == 'ingest':
@@ -130,6 +139,9 @@ def common_data(option_delta_years, option_days_ahead, origin):
     else:
         raise ValueError('origin must be ingest_cer, local, or auto')
 
-    dolar_blue_df_fc = forecast_dolar_blue_prophet(df_actual=dolar_blue_df, days_ahead=option_days_ahead)
+    if forecast:
+        dolar_blue_df_fc = cached_forecast_dolar_blue_prophet(df_actual=dolar_blue_df, days_ahead=option_days_ahead)
+    else:
+        dolar_blue_df_fc = None
 
     return cer_df, uva_df, cer_df_fc, uva_df_fc, today, dolar_blue_df, dolar_blue_df_fc

@@ -24,7 +24,7 @@ if __name__ == '__main__':
         fig_val.add_annotation(x=today, y=df_plot.loc[today]['y'], text='hoy')
         st.plotly_chart(fig_val, use_container_width=True)
 
-    with st.expander(label="Variación diaria", expanded=True):
+    with st.expander(label="Variación diaria", expanded=False):
         st.subheader('Variación diaria')
         df_plot, df_fc_plot = df2plot(get_day_diff(cer_df) if option_uva_cer == 'CER' else get_day_diff(uva_df),
                                       get_day_diff(cer_df_fc) if option_uva_cer == 'CER' else get_day_diff(uva_df_fc))
@@ -43,7 +43,7 @@ if __name__ == '__main__':
         fig_val.add_annotation(x=today, y=df_plot.loc[today]['y'], text='hoy')
         st.plotly_chart(fig_val, use_container_width=True)
 
-    with st.expander(label="Variación diaria", expanded=True):
+    with st.expander(label="Variación diaria", expanded=False):
         st.subheader('Variación diaria')
         df_plot, df_fc_plot = df2plot(get_day_diff(dolar_blue_df),
                                       get_day_diff(dolar_blue_df_fc))

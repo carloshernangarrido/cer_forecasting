@@ -21,10 +21,10 @@ def get_uva_df(cer_df):
 
 def resample_df(df: pd.DataFrame):
     df = df.sort_index(ascending=True)
-    now = datetime.datetime.today()
+    now = datetime.datetime.now(tz=pytz.timezone('America/Argentina/Mendoza'))
     today = pytz.timezone('America/Argentina/Mendoza').\
         localize(pytz.datetime.datetime(year=now.year, month=now.month, day=now.day))
-    print(today)
+    print("En argentina hoy es: ", today, ". Tomado de: ", now)
     try:
         _ = df.loc[today]
     except KeyError:

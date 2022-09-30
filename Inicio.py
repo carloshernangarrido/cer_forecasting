@@ -1,3 +1,5 @@
+import datetime
+
 import streamlit as st
 from utils.common import common_data, common_dash
 from utils.plots import plot_df_fc, df2plot, plot_comp
@@ -21,12 +23,21 @@ if __name__ == '__main__':
                                                             dolar_blue_df_fc)
         fig = plot_comp(uva_df_plot, uva_df_fc_plot, today, dolar_blue_df_plot, dolar_blue_df_fc_plot)
         fig.add_vline(x=today)
-        fig.add_annotation(x=today, y=1, text=f'hoy UVA={round(uva_df_plot.loc[today]["y"])}, '
-                                              f'dólar blue={round(dolar_blue_df_plot.loc[today]["y"])}')
-        st.plotly_chart(fig, use_container_width=True)
+        fig.add_annotation(x=today, y=1, text=f'hoy '
+                                              f'<br>UVA={round(uva_df_plot.loc[today]["y"])}, '
+                                              f'<br>dólar blue={round(dolar_blue_df_plot.loc[today]["y"])}')
 
+        cols = st.columns(3)
+        if cols[1].button("... quiero ver más allá de lo evidente ..."):
+            fig.update_xaxes(range=[today - datetime.timedelta(days=360*option_delta_years),
+                                    today + datetime.timedelta(days=option_days_ahead)])
+        else:
+            fig.update_xaxes(range=[today - datetime.timedelta(days=360*option_delta_years),
+                                    today + datetime.timedelta(days=30)])
+            button_state = 0
+        st.plotly_chart(fig, use_container_width=True)
     st.header(f"Datos pronosticados de {option_uva_cer}")
-    with st.expander(label="Valores", expanded=True):
+    with st.expander(label="Valores", expanded=False):
         st.subheader('Valores')
         df_plot, df_fc_plot = df2plot(cer_df if option_uva_cer == 'CER' else uva_df,
                                       cer_df_fc if option_uva_cer == 'CER' else uva_df_fc)
@@ -45,7 +56,7 @@ if __name__ == '__main__':
         st.plotly_chart(fig_day, use_container_width=True)
 
     st.header(f"Datos pronosticados de Dólar Blue")
-    with st.expander(label="Valores", expanded=True):
+    with st.expander(label="Valores", expanded=False):
         st.subheader('Valores')
         df_plot, df_fc_plot = df2plot(dolar_blue_df,
                                       dolar_blue_df_fc)
@@ -65,9 +76,14 @@ if __name__ == '__main__':
 
     with st.expander(label="Acerca de...", expanded=True):
         st.subheader("Acerca de...")
-        st.text("Desarrollado por Hernán Garrido, 261 15 3636206, carloshernangarrido@gmail.com"
+        st.text("Desarrollado por Hernán Garrido, "
+                "\nCel: +5492613636206"
+                "\nemail: carloshernangarrido@gmail.com"
                 "\nDatos de CER/UVA tomados de: http://www.bcra.gov.ar"
                 "\nDatos de dólar blue tomados de: https://www.ambito.com/"
                 "\nPronosticado con Facebook Prophet")
+        if st.button(label="Código fuente:"):
+            st.markdown('<a href="https://github.com/carloshernangarrido" target="_self">En mi perfil de github!</a>',
+                        unsafe_allow_html=True)
 
 

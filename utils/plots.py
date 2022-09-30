@@ -72,16 +72,16 @@ def plot_comp(uva_df_plot, uva_df_fc_plot, today, dolar_blue_df_plot, dolar_blue
 
     fig.add_scatter(x=dolar_blue_df_fc_plot.index,
                     y=dolar_blue_df_fc_plot.yhat_lower / dolar_blue_df_fc_plot.yhat[today],
-                    name='dólar blue incertidumbre', line={'color': 'GreenYellow'})
+                    name='dólar blue incertidumbre', line={'color': 'LightGreen'})
     fig.add_scatter(x=dolar_blue_df_fc_plot.index,
                     y=dolar_blue_df_fc_plot.yhat_upper / dolar_blue_df_fc_plot.yhat[today],
-                    name='dólar blue pronosticado mayor', line={'color': 'GreenYellow'}, showlegend=False)
+                    name='dólar blue pronosticado mayor', line={'color': 'LightGreen'}, showlegend=False)
     fig.add_scatter(x=dolar_blue_df_plot.index,
                     y=dolar_blue_df_plot.y / dolar_blue_df_fc_plot.yhat[today],
-                    name='dólar blue actual', line={'color': 'LimeGreen'})
+                    name='dólar blue actual', line={'color': 'DarkGreen'})
     fig.add_scatter(x=dolar_blue_df_fc_plot.index,
                     y=dolar_blue_df_fc_plot.yhat / dolar_blue_df_fc_plot.yhat[today],
-                    name='dólar blue pronosticado', line={'color': 'LightGreen'})
+                    name='dólar blue pronosticado', line={'color': 'LimeGreen'})
 
     fig.update_layout(legend=dict(
         yanchor="bottom",

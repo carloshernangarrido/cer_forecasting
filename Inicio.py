@@ -63,5 +63,11 @@ if __name__ == '__main__':
         fig_day.add_annotation(x=today, y=df_plot.loc[today]['y'], text='hoy')
         st.plotly_chart(fig_day, use_container_width=True)
 
+    with st.expander(label="Acerca de...", expanded=True):
+        st.subheader("Acerca de...")
+        st.text("Desarrollado por Hernán Garrido, 261 15 3636206, carloshernangarrido@gmail.com"
+                "\nDatos de CER/UVA tomados de: http://www.bcra.gov.ar"
+                "\nDatos de dólar blue tomados de: https://www.ambito.com/"
+                "\nPronosticado con Facebook Prophet")
 
 

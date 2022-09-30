@@ -59,10 +59,10 @@ def plot_comp(uva_df_plot, uva_df_fc_plot, today, dolar_blue_df_plot, dolar_blue
 
     fig.add_scatter(x=uva_df_fc_plot.index,
                     y=uva_df_fc_plot.yhat_lower / uva_df_fc_plot.yhat[today],
-                    name='uva pronosticado menor', line={'color': 'pink'})
+                    name='uva incertidumbre', line={'color': 'pink'})
     fig.add_scatter(x=uva_df_fc_plot.index,
                     y=uva_df_fc_plot.yhat_upper / uva_df_fc_plot.yhat[today],
-                    name='uva pronosticado mayor', line={'color': 'pink'})
+                    name='uva pronosticado mayor', line={'color': 'pink'}, showlegend=False)
     fig.add_scatter(x=uva_df_plot.index,
                     y=uva_df_plot.y / uva_df_fc_plot.yhat[today],
                     name='uva actual', line={'color': 'red'})
@@ -72,21 +72,21 @@ def plot_comp(uva_df_plot, uva_df_fc_plot, today, dolar_blue_df_plot, dolar_blue
 
     fig.add_scatter(x=dolar_blue_df_fc_plot.index,
                     y=dolar_blue_df_fc_plot.yhat_lower / dolar_blue_df_fc_plot.yhat[today],
-                    name='dólar blue pronosticado menor', line={'color': '#2ca02c'})
+                    name='dólar blue incertidumbre', line={'color': 'GreenYellow'})
     fig.add_scatter(x=dolar_blue_df_fc_plot.index,
                     y=dolar_blue_df_fc_plot.yhat_upper / dolar_blue_df_fc_plot.yhat[today],
-                    name='dólar blue pronosticado mayor', line={'color': '#2ca02c'})
+                    name='dólar blue pronosticado mayor', line={'color': 'GreenYellow'}, showlegend=False)
     fig.add_scatter(x=dolar_blue_df_plot.index,
                     y=dolar_blue_df_plot.y / dolar_blue_df_fc_plot.yhat[today],
                     name='dólar blue actual', line={'color': 'green'})
     fig.add_scatter(x=dolar_blue_df_fc_plot.index,
                     y=dolar_blue_df_fc_plot.yhat / dolar_blue_df_fc_plot.yhat[today],
-                    name='dólar blue pronosticado', line={'color': 'blue'})
-
-    fig.update_layout(legend=dict(
-        yanchor="bottom",
-        y=0.01,
-        xanchor="left",
-        x=0.01
-    ))
+                    name='dólar blue pronosticado', line={'color': 'LightGreen'})
+    #
+    # fig.update_layout(legend=dict(
+    #     yanchor="bottom",
+    #     y=0.01,
+    #     xanchor="left",
+    #     x=0.01
+    # ))
     return fig

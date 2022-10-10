@@ -13,7 +13,7 @@ if __name__ == '__main__':
     date_val = (today - dt.timedelta(days=option_days_ahead))
     cer_df_val = cer_df[:date_val]
     uva_df_val = get_uva_df(cer_df_val)
-    cer_df_fc_val = cached_forecast_cer_prophet(df_actual=cer_df_val, days_ahead=option_days_ahead)
+    cer_df_fc_val = cached_forecast_cer_prophet(df_actual=cer_df_val, days_ahead=option_days_ahead, dump=False)
     uva_df_fc_val = get_uva_df(cer_df_fc_val)
 
     st.header(f"Validación de pronóstico de {option_uva_cer}")

@@ -8,28 +8,6 @@ from utils.forecasting import forecast_cer_prophet, forecast_dolar_blue_prophet
 from utils.pre_processing import get_uva_df, resample_df
 
 
-@st.cache
-def cached_get_cer_df(**kwargs):
-    return get_cer_df(url=kwargs['url'] if 'url' in kwargs.keys() else None,
-                      delta_years=kwargs['delta_years'])
-
-
-@st.cache
-def cached_get_dolar_blue_df(**kwargs):
-    return get_dolar_blue_df(url=kwargs['url'] if 'url' in kwargs.keys() else None,
-                             delta_years=kwargs['delta_years'])
-
-
-@st.cache
-def cached_forecast_cer_prophet(**kwargs):
-    return forecast_cer_prophet(df_actual=kwargs['df_actual'], days_ahead=kwargs['days_ahead'])
-
-
-@st.cache
-def cached_forecast_dolar_blue_prophet(**kwargs):
-    return forecast_dolar_blue_prophet(df_actual=kwargs['df_actual'], days_ahead=kwargs['days_ahead'])
-
-
 def common_dash():
     st.markdown(""" <style>
     #MainMenu {visibility: hidden;}
@@ -51,30 +29,32 @@ def common_dash():
     return option_uva_cer, option_delta_years, option_days_ahead, option_origin
 
 
-def ingest_cer(option_delta_years):
-    cer_df_ = cached_get_cer_df(delta_years=option_delta_years)
+def ingest_cer(option_delta_years, dump: bool):
+    cer_df_ = get_cer_df(delta_years=option_delta_years)
     cer_df_ = cer_df_.copy(deep=True)
     cer_df = resample_df(df=cer_df_)
-    cer_df.to_pickle('cer_df.pickle')
+    if dump:
+        cer_df.to_pickle('cer_df.pickle')
     return cer_df
 
 
-def ingest_dolar_blue(option_delta_years):
-    dolar_blue_df_ = cached_get_dolar_blue_df(delta_years=option_delta_years)
+def ingest_dolar_blue(option_delta_years, dump: bool):
+    dolar_blue_df_ = get_dolar_blue_df(delta_years=option_delta_years)
     dolar_blue_df_ = dolar_blue_df_.copy(deep=True)
     dolar_blue_df = resample_df(df=dolar_blue_df_)
-    dolar_blue_df.to_pickle('dolar_blue_df.pickle')
+    if dump:
+        dolar_blue_df.to_pickle('dolar_blue_df.pickle')
     return dolar_blue_df
 
 
-def common_data(option_delta_years, option_days_ahead, origin, forecast=True):
+def common_data(option_delta_years, option_days_ahead, origin, forecast=True, dump=True):
     print('\n*** CER / UVA ***')
     if origin == 'ingest':
         print(f'>> ingesting because user required')
-        cer_df = ingest_cer(option_delta_years)
+        cer_df = ingest_cer(option_delta_years, dump)
         print(f'>> forecasting because user required')
         if forecast:
-            cer_df_fc = cached_forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead)
+            cer_df_fc = forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead)
             uva_df_fc = get_uva_df(cer_df_fc)
         else:
             cer_df_fc = None
@@ -87,10 +67,10 @@ def common_data(option_delta_years, option_days_ahead, origin, forecast=True):
             uva_df_fc = get_uva_df(cer_df_fc)
         except FileNotFoundError():
             print('>> ingesting because file was not found')
-            cer_df = ingest_cer(option_delta_years)
+            cer_df = ingest_cer(option_delta_years, dump)
             print('>> forecasting because file was not found')
             if forecast:
-                cer_df_fc = cached_forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead)
+                cer_df_fc = forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead)
                 uva_df_fc = get_uva_df(cer_df_fc)
             else:
                 cer_df_fc = None
@@ -106,31 +86,31 @@ def common_data(option_delta_years, option_days_ahead, origin, forecast=True):
                 if cer_df.index[-1].year - cer_df.index[0].year != option_delta_years:
                     print(f'>> ingesting because delta_years_local = {cer_df.index[-1].year - cer_df.index[0].year}, '
                           f'and option_delta_years = {option_delta_years}')
-                    cer_df = ingest_cer(option_delta_years)
+                    cer_df = ingest_cer(option_delta_years, dump)
                     print(f'>> forecasting because delta_years_local = {cer_df.index[-1].year - cer_df.index[0].year}, '
                           f'and option_delta_years = {option_delta_years}')
                     if forecast:
-                        cer_df_fc = cached_forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead)
+                        cer_df_fc = forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead)
                         uva_df_fc = get_uva_df(cer_df_fc)
                     else:
                         cer_df_fc = None
                         uva_df_fc = None
             else:
                 print('>> ingesting because file is old')
-                cer_df = ingest_cer(option_delta_years)
+                cer_df = ingest_cer(option_delta_years, dump)
                 print(f'>> forecasting because because file is old')
                 if forecast:
-                    cer_df_fc = cached_forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead)
+                    cer_df_fc = forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead)
                     uva_df_fc = get_uva_df(cer_df_fc)
                 else:
                     cer_df_fc = None
                     uva_df_fc = None
         except FileNotFoundError:
             print('>> ingesting because file was not found')
-            cer_df = ingest_cer(option_delta_years)
+            cer_df = ingest_cer(option_delta_years, dump)
             print(f'>> forecasting because file was not found')
             if forecast:
-                cer_df_fc = cached_forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead)
+                cer_df_fc = forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead)
                 uva_df_fc = get_uva_df(cer_df_fc)
             else:
                 cer_df_fc = None
@@ -141,10 +121,10 @@ def common_data(option_delta_years, option_days_ahead, origin, forecast=True):
     print('\n*** Dólar Blue ***')
     if origin == 'ingest':
         print(f'>> ingesting because user required')
-        dolar_blue_df = ingest_dolar_blue(option_delta_years)
+        dolar_blue_df = ingest_dolar_blue(option_delta_years, dump)
         print(f'>> forecasting because user required')
         if forecast:
-            dolar_blue_df_fc = cached_forecast_dolar_blue_prophet(df_actual=dolar_blue_df, days_ahead=option_days_ahead)
+            dolar_blue_df_fc = forecast_dolar_blue_prophet(df_actual=dolar_blue_df, days_ahead=option_days_ahead)
         else:
             dolar_blue_df_fc = None
     elif origin == 'local':
@@ -154,10 +134,10 @@ def common_data(option_delta_years, option_days_ahead, origin, forecast=True):
             dolar_blue_df_fc = pd.read_pickle('dolar_blue_df_fc.pickle')
         except FileNotFoundError():
             print('>> ingesting because file was not found')
-            dolar_blue_df = ingest_dolar_blue(option_delta_years)
+            dolar_blue_df = ingest_dolar_blue(option_delta_years, dump)
             print('>> forecasting because file was not found')
             if forecast:
-                dolar_blue_df_fc = cached_forecast_dolar_blue_prophet(df_actual=dolar_blue_df, days_ahead=option_days_ahead)
+                dolar_blue_df_fc = forecast_dolar_blue_prophet(df_actual=dolar_blue_df, days_ahead=option_days_ahead)
             else:
                 dolar_blue_df_fc = None
     elif origin == 'auto':
@@ -171,30 +151,30 @@ def common_data(option_delta_years, option_days_ahead, origin, forecast=True):
                     print(f'>> ingesting because delta_years_local = '
                           f'{dolar_blue_df.index[-1].year - dolar_blue_df.index[0].year}, '
                           f'and option_delta_years = {option_delta_years}')
-                    dolar_blue_df = ingest_dolar_blue(option_delta_years)
+                    dolar_blue_df = ingest_dolar_blue(option_delta_years, dump)
                     print(f'>> forecasting because delta_years_local = '
                           f'{dolar_blue_df.index[-1].year - dolar_blue_df.index[0].year}, '
                           f'and option_delta_years = {option_delta_years}')
                     if forecast:
-                        dolar_blue_df_fc = cached_forecast_dolar_blue_prophet(df_actual=dolar_blue_df,
+                        dolar_blue_df_fc = forecast_dolar_blue_prophet(df_actual=dolar_blue_df,
                                                                               days_ahead=option_days_ahead)
                     else:
                         dolar_blue_df_fc = None
             else:
                 print('>> ingesting because file is old')
-                dolar_blue_df = ingest_dolar_blue(option_delta_years)
+                dolar_blue_df = ingest_dolar_blue(option_delta_years, dump)
                 print('>> forecasting because file is old')
                 if forecast:
-                    dolar_blue_df_fc = cached_forecast_dolar_blue_prophet(df_actual=dolar_blue_df,
+                    dolar_blue_df_fc = forecast_dolar_blue_prophet(df_actual=dolar_blue_df,
                                                                           days_ahead=option_days_ahead)
                 else:
                     dolar_blue_df_fc = None
         except FileNotFoundError:
             print('>> ingesting because file was not found')
-            dolar_blue_df = ingest_dolar_blue(option_delta_years)
+            dolar_blue_df = ingest_dolar_blue(option_delta_years, dump)
             print('>> forecasting because file was not found')
             if forecast:
-                dolar_blue_df_fc = cached_forecast_dolar_blue_prophet(df_actual=dolar_blue_df, days_ahead=option_days_ahead)
+                dolar_blue_df_fc = forecast_dolar_blue_prophet(df_actual=dolar_blue_df, days_ahead=option_days_ahead)
             else:
                 dolar_blue_df_fc = None
     else:

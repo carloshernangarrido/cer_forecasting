@@ -2,9 +2,10 @@ from prophet import Prophet
 import pandas as pd
 
 
-def forecast_cer_prophet(df_actual: pd.DataFrame, days_ahead: int = 1, dump=True):
+def forecast_cer_prophet(df_actual: pd.DataFrame, days_ahead: int = 1, dump: bool = True):
     """
 Uses prophet to forecast df a number of days ahead.
+    :param dump: flag to decide if dump df into a pickle
     :param df_actual: data frame containing actual data
     :param days_ahead: Number of days to forecast.
     :return: data frame containing actual and forecasted data
@@ -31,9 +32,10 @@ Uses prophet to forecast df a number of days ahead.
     return cer_df_fc
 
 
-def forecast_dolar_blue_prophet(df_actual: pd.DataFrame, days_ahead: int = 1, dump=True):
+def forecast_dolar_blue_prophet(df_actual: pd.DataFrame, days_ahead: int = 1, dump: bool = True):
     """
 Uses prophet to forecast df a number of days ahead.
+    :param dump: flag to decide if dump df into a pickle
     :param df_actual: data frame containing actual data
     :param days_ahead: Number of days to forecast.
     :return: data frame containing actual and forecasted data

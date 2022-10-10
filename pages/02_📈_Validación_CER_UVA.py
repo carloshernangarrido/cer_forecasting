@@ -1,6 +1,6 @@
 import streamlit as st
 import datetime as dt
-from utils.common import cached_forecast_cer_prophet, common_dash, common_data
+from utils.common import forecast_cer_prophet, common_dash, common_data
 from utils.plots import df2plot, plot_df_fc
 from utils.pre_processing import get_uva_df, get_day_diff
 
@@ -8,12 +8,12 @@ from utils.pre_processing import get_uva_df, get_day_diff
 if __name__ == '__main__':
     option_uva_cer, option_delta_years, option_days_ahead, option_origin = common_dash()
     cer_df, uva_df, cer_df_fc, uva_df_fc, today, dolar_blue_df, dolar_blue_df_fc = \
-        common_data(option_delta_years, option_days_ahead, option_origin, forecast=False)
+        common_data(option_delta_years, option_days_ahead, option_origin, forecast=False, dump=False)
 
     date_val = (today - dt.timedelta(days=option_days_ahead))
     cer_df_val = cer_df[:date_val]
     uva_df_val = get_uva_df(cer_df_val)
-    cer_df_fc_val = cached_forecast_cer_prophet(df_actual=cer_df_val, days_ahead=option_days_ahead, dump=False)
+    cer_df_fc_val = forecast_cer_prophet(df_actual=cer_df_val, days_ahead=option_days_ahead, dump=False)
     uva_df_fc_val = get_uva_df(cer_df_fc_val)
 
     st.header(f"Validación de pronóstico de {option_uva_cer}")

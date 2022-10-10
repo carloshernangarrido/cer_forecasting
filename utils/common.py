@@ -8,24 +8,24 @@ from utils.forecasting import forecast_cer_prophet, forecast_dolar_blue_prophet
 from utils.pre_processing import get_uva_df, resample_df
 
 
-# @st.cache
+@st.cache
 def cached_get_cer_df(**kwargs):
     return get_cer_df(url=kwargs['url'] if 'url' in kwargs.keys() else None,
                       delta_years=kwargs['delta_years'])
 
 
-# @st.cache
+@st.cache
 def cached_get_dolar_blue_df(**kwargs):
     return get_dolar_blue_df(url=kwargs['url'] if 'url' in kwargs.keys() else None,
                              delta_years=kwargs['delta_years'])
 
 
-# @st.cache
+@st.cache
 def cached_forecast_cer_prophet(**kwargs):
     return forecast_cer_prophet(df_actual=kwargs['df_actual'], days_ahead=kwargs['days_ahead'])
 
 
-# @st.cache
+@st.cache
 def cached_forecast_dolar_blue_prophet(**kwargs):
     return forecast_dolar_blue_prophet(df_actual=kwargs['df_actual'], days_ahead=kwargs['days_ahead'])
 

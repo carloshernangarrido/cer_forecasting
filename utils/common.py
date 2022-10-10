@@ -1,7 +1,5 @@
 import pathlib
-
 import streamlit as st
-
 import const
 import pandas as pd
 import datetime as dt
@@ -15,10 +13,11 @@ def cached_get_cer_df(**kwargs):
     return get_cer_df(url=kwargs['url'] if 'url' in kwargs.keys() else None,
                       delta_years=kwargs['delta_years'])
 
-#
-# @st.cache
-# def cached_resample_df(**kwargs):
-#     return resample_df(df=kwargs['df'])
+
+@st.cache
+def cached_get_dolar_blue_df(**kwargs):
+    return get_dolar_blue_df(url=kwargs['url'] if 'url' in kwargs.keys() else None,
+                             delta_years=kwargs['delta_years'])
 
 
 @st.cache
@@ -45,7 +44,7 @@ def common_dash():
     with st.sidebar:
         st.header("Parámetros")
         option_uva_cer = st.selectbox('¿CER o UVA?', ('CER', 'UVA'))
-        option_delta_years = st.selectbox('Años hacia atrás', range(1, 10), index=const.YEARS_BEHIND-1)
+        option_delta_years = st.selectbox('Años hacia atrás', range(1, 10), index=const.YEARS_BEHIND - 1)
         option_days_ahead = st.select_slider('Días hacia adelante', options=range(1, 366), value=const.DAYS_AHEAD)
         option_origin = st.selectbox('Origen de los datos', ('auto', 'ingest', 'local'))
 
@@ -61,7 +60,7 @@ def ingest_cer(option_delta_years):
 
 
 def ingest_dolar_blue(option_delta_years):
-    dolar_blue_df_ = get_dolar_blue_df(delta_years=option_delta_years)
+    dolar_blue_df_ = cached_get_dolar_blue_df(delta_years=option_delta_years)
     dolar_blue_df_ = dolar_blue_df_.copy(deep=True)
     dolar_blue_df = resample_df(df=dolar_blue_df_)
     dolar_blue_df.to_pickle('dolar_blue_df.pickle')

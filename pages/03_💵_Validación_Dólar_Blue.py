@@ -12,7 +12,8 @@ if __name__ == '__main__':
 
     date_val = (today - dt.timedelta(days=option_days_ahead))
     dolar_blue_df_val = dolar_blue_df[:date_val]
-    dolar_blue_df_fc_val = cached_forecast_dolar_blue_prophet(df_actual=dolar_blue_df_val, days_ahead=option_days_ahead)
+    dolar_blue_df_fc_val = cached_forecast_dolar_blue_prophet(df_actual=dolar_blue_df_val,
+                                                              days_ahead=option_days_ahead, dump=False)
 
     st.header(f"Validación de pronóstico de dólar blue")
     with st.expander(label="Valores", expanded=True):

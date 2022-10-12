@@ -181,5 +181,10 @@ def common_data(option_delta_years, option_days_ahead, origin, forecast=True, du
         raise ValueError('origin must be ingest_cer, local, or auto')
 
     uva_df = get_uva_df(cer_df)
-    today = cer_df.index[-1]
+    today_cer, today_dolar_blue = cer_df.index[-1], dolar_blue_df.index[-1]
+    if today_cer < today_dolar_blue:
+        today = today_cer
+    else:
+        today = today_dolar_blue
+    # print(f'{today_cer=}, {today_dolar_blue=}, {today=}')
     return cer_df, uva_df, cer_df_fc, uva_df_fc, today, dolar_blue_df, dolar_blue_df_fc

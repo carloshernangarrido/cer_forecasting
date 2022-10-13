@@ -157,7 +157,7 @@ def common_data(option_delta_years, option_days_ahead, origin, forecast=True, du
                           f'and option_delta_years = {option_delta_years}')
                     if forecast:
                         dolar_blue_df_fc = forecast_dolar_blue_prophet(df_actual=dolar_blue_df,
-                                                                              days_ahead=option_days_ahead)
+                                                                       days_ahead=option_days_ahead)
                     else:
                         dolar_blue_df_fc = None
             else:
@@ -166,7 +166,7 @@ def common_data(option_delta_years, option_days_ahead, origin, forecast=True, du
                 print('>> forecasting because file is old')
                 if forecast:
                     dolar_blue_df_fc = forecast_dolar_blue_prophet(df_actual=dolar_blue_df,
-                                                                          days_ahead=option_days_ahead)
+                                                                   days_ahead=option_days_ahead)
                 else:
                     dolar_blue_df_fc = None
         except FileNotFoundError:
@@ -186,5 +186,5 @@ def common_data(option_delta_years, option_days_ahead, origin, forecast=True, du
         today = today_cer
     else:
         today = today_dolar_blue
-    # print(f'{today_cer=}, {today_dolar_blue=}, {today=}')
+    print(f'{today_cer=}, {today_dolar_blue=}, {today=}')
     return cer_df, uva_df, cer_df_fc, uva_df_fc, today, dolar_blue_df, dolar_blue_df_fc

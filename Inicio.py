@@ -23,7 +23,7 @@ if __name__ == '__main__':
                                                             dolar_blue_df_fc)
         fig = plot_comp(uva_df_plot, uva_df_fc_plot, today, dolar_blue_df_plot, dolar_blue_df_fc_plot)
         fig.add_vline(x=today)
-        fig.add_annotation(x=today, y=1, text=f'hoy '
+        fig.add_annotation(x=today, y=1, text=f'hoy {today}'
                                               f'<br>UVA={round(uva_df_plot.loc[today]["y"])}, '
                                               f'<br>dólar blue={round(dolar_blue_df_plot.loc[today]["y"])}')
 

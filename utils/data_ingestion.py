@@ -84,45 +84,47 @@ def get_dolar_blue_df(url: str = None, delta_years: int = 10):
         service=service,
     )
     driver.get(url)
-    fecha_desde = driver.find_element(By.CSS_SELECTOR, "input[class='datepicker desde form-control']")
-    wait = WebDriverWait(driver, 2)
-    wait.until(lambda d: fecha_desde.is_displayed())
-    fecha_desde.click()
-    fecha_desde.clear()
-    for i in range(10):
-        fecha_desde.send_keys(Keys.BACK_SPACE)
-    driver.implicitly_wait(1)
-    fecha_keys = (pytz.datetime.datetime.today().date() - dt.timedelta(days=delta_years*365)).strftime('%d-%m-%Y')
-    fecha_desde.send_keys(fecha_keys)
-    driver.implicitly_wait(1)
-    fecha_desde.send_keys(Keys.ENTER)
-    driver.implicitly_wait(1)
-    fecha_hasta = driver.find_element(By.CSS_SELECTOR, "input[class='datepicker hasta form-control']")
-    wait = WebDriverWait(driver, 2)
-    wait.until(lambda d: fecha_hasta.is_displayed())
-    fecha_hasta.click()
-    fecha_hasta.clear()
-    for i in range(10):
-        fecha_hasta.send_keys(Keys.BACK_SPACE)
-    fecha_keys = pytz.datetime.datetime.today().date().strftime('%d-%m-%Y')
-    fecha_hasta.send_keys(fecha_keys)
-    fecha_desde.send_keys(Keys.ENTER)
-    boton_buscar = driver.find_element(By.CSS_SELECTOR, "button[class='boton']")
-    wait = WebDriverWait(driver, 2)
-    wait.until(lambda d: boton_buscar.is_displayed())
-    boton_buscar.click()
-    sleep(1)
-    # driver.implicitly_wait(10)
-    table_raw = driver.find_elements(By.TAG_NAME, 'tbody')
-    table_raw = table_raw[0].text.split('\n')
-    # print(table_raw)
-    df = pd.DataFrame(columns=['date', 'compra', 'venta'])
-    df['date'] = [
-        pytz.timezone('America/Argentina/Mendoza').localize(pytz.datetime.datetime.strptime(row[0:10], "%d-%m-%Y"))
-        for row in table_raw]
-    df['compra'] = [float(row.split(' ')[1].replace(',', '.')) for row in table_raw]
-    df['venta'] = [float(row.split(' ')[2].replace(',', '.')) for row in table_raw]
-    driver.implicitly_wait(1)
+    df = None
+    for i in range(2):
+        fecha_desde = driver.find_element(By.CSS_SELECTOR, "input[class='datepicker desde form-control']")
+        wait = WebDriverWait(driver, 2)
+        wait.until(lambda d: fecha_desde.is_displayed())
+        fecha_desde.click()
+        fecha_desde.clear()
+        for i in range(10):
+            fecha_desde.send_keys(Keys.BACK_SPACE)
+        driver.implicitly_wait(1)
+        fecha_keys = (pytz.datetime.datetime.today().date() - dt.timedelta(days=delta_years*365)).strftime('%d-%m-%Y')
+        fecha_desde.send_keys(fecha_keys)
+        driver.implicitly_wait(1)
+        fecha_desde.send_keys(Keys.ENTER)
+        driver.implicitly_wait(1)
+        fecha_hasta = driver.find_element(By.CSS_SELECTOR, "input[class='datepicker hasta form-control']")
+        wait = WebDriverWait(driver, 2)
+        wait.until(lambda d: fecha_hasta.is_displayed())
+        fecha_hasta.click()
+        fecha_hasta.clear()
+        for i in range(10):
+            fecha_hasta.send_keys(Keys.BACK_SPACE)
+        fecha_keys = pytz.datetime.datetime.today().date().strftime('%d-%m-%Y')
+        fecha_hasta.send_keys(fecha_keys)
+        fecha_desde.send_keys(Keys.ENTER)
+        boton_buscar = driver.find_element(By.CSS_SELECTOR, "button[class='boton']")
+        wait = WebDriverWait(driver, 2)
+        wait.until(lambda d: boton_buscar.is_displayed())
+        boton_buscar.click()
+        # sleep(1)
+        # driver.implicitly_wait(10)
+        table_raw = driver.find_elements(By.TAG_NAME, 'tbody')
+        table_raw = table_raw[0].text.split('\n')
+        # print(table_raw)
+        df = pd.DataFrame(columns=['date', 'compra', 'venta'])
+        df['date'] = [
+            pytz.timezone('America/Argentina/Mendoza').localize(pytz.datetime.datetime.strptime(row[0:10], "%d-%m-%Y"))
+            for row in table_raw]
+        df['compra'] = [float(row.split(' ')[1].replace(',', '.')) for row in table_raw]
+        df['venta'] = [float(row.split(' ')[2].replace(',', '.')) for row in table_raw]
+        driver.implicitly_wait(1)
     driver.quit()
 
     df.set_index(keys=df['date'], inplace=True)

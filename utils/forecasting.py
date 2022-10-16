@@ -25,6 +25,7 @@ Uses prophet to forecast df a number of days ahead.
         m.add_country_holidays(country_name='Argentina')
     if isinstance(dolar_blue_df_fc, pd.DataFrame):
         df['dolar_blue'] = dolar_blue_df_fc['venta']
+        df.dropna(inplace=True)
         m.add_regressor('dolar_blue')
     m.fit(df)
     future = m.make_future_dataframe(periods=days_ahead)

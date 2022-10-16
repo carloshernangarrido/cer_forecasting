@@ -25,8 +25,10 @@ def common_dash():
         option_delta_years = st.selectbox('Años hacia atrás', range(1, 10), index=const.YEARS_BEHIND - 1)
         option_days_ahead = st.select_slider('Días hacia adelante', options=range(1, 366), value=const.DAYS_AHEAD)
         option_origin = st.selectbox('Origen de los datos', ('auto', 'ingest', 'local'))
+        option_holidays = st.selectbox('¿incluir feriados?', ('SI', 'NO'))
+        holidays_flag = True if option_holidays == 'SI' else False
 
-    return option_uva_cer, option_delta_years, option_days_ahead, option_origin
+    return option_uva_cer, option_delta_years, option_days_ahead, option_origin, holidays_flag
 
 
 def ingest_cer(option_delta_years, dump: bool):
@@ -47,14 +49,15 @@ def ingest_dolar_blue(option_delta_years, dump: bool):
     return dolar_blue_df
 
 
-def common_data(option_delta_years, option_days_ahead, origin, forecast=True, dump=True):
+def common_data(option_delta_years, option_days_ahead, origin, forecast=True, dump=True, holidays_flag=True):
     print('\n*** CER / UVA ***')
     if origin == 'ingest':
         print(f'>> ingesting because user required')
         cer_df = ingest_cer(option_delta_years, dump)
         print(f'>> forecasting because user required')
         if forecast:
-            cer_df_fc = forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead)
+            cer_df_fc = forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead,
+                                             holidays_flag=holidays_flag)
             uva_df_fc = get_uva_df(cer_df_fc)
         else:
             cer_df_fc = None
@@ -70,7 +73,8 @@ def common_data(option_delta_years, option_days_ahead, origin, forecast=True, du
             cer_df = ingest_cer(option_delta_years, dump)
             print('>> forecasting because file was not found')
             if forecast:
-                cer_df_fc = forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead)
+                cer_df_fc = forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead,
+                                                 holidays_flag=holidays_flag)
                 uva_df_fc = get_uva_df(cer_df_fc)
             else:
                 cer_df_fc = None
@@ -90,7 +94,8 @@ def common_data(option_delta_years, option_days_ahead, origin, forecast=True, du
                     print(f'>> forecasting because delta_years_local = {cer_df.index[-1].year - cer_df.index[0].year}, '
                           f'and option_delta_years = {option_delta_years}')
                     if forecast:
-                        cer_df_fc = forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead)
+                        cer_df_fc = forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead,
+                                                         holidays_flag=holidays_flag)
                         uva_df_fc = get_uva_df(cer_df_fc)
                     else:
                         cer_df_fc = None
@@ -100,7 +105,8 @@ def common_data(option_delta_years, option_days_ahead, origin, forecast=True, du
                 cer_df = ingest_cer(option_delta_years, dump)
                 print(f'>> forecasting because because file is old')
                 if forecast:
-                    cer_df_fc = forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead)
+                    cer_df_fc = forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead,
+                                                     holidays_flag=holidays_flag)
                     uva_df_fc = get_uva_df(cer_df_fc)
                 else:
                     cer_df_fc = None
@@ -110,7 +116,8 @@ def common_data(option_delta_years, option_days_ahead, origin, forecast=True, du
             cer_df = ingest_cer(option_delta_years, dump)
             print(f'>> forecasting because file was not found')
             if forecast:
-                cer_df_fc = forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead)
+                cer_df_fc = forecast_cer_prophet(df_actual=cer_df, days_ahead=option_days_ahead,
+                                                 holidays_flag=holidays_flag)
                 uva_df_fc = get_uva_df(cer_df_fc)
             else:
                 cer_df_fc = None
@@ -123,7 +130,7 @@ def common_data(option_delta_years, option_days_ahead, origin, forecast=True, du
         print(f'>> ingesting because user required')
         dolar_blue_df = ingest_dolar_blue(option_delta_years, dump)
         print(f'>> forecasting because user required')
-        if forecast:
+        if forecast or forecast == 'dolar_blue':
             dolar_blue_df_fc = forecast_dolar_blue_prophet(df_actual=dolar_blue_df, days_ahead=option_days_ahead)
         else:
             dolar_blue_df_fc = None
@@ -136,7 +143,7 @@ def common_data(option_delta_years, option_days_ahead, origin, forecast=True, du
             print('>> ingesting because file was not found')
             dolar_blue_df = ingest_dolar_blue(option_delta_years, dump)
             print('>> forecasting because file was not found')
-            if forecast:
+            if forecast or forecast == 'dolar_blue':
                 dolar_blue_df_fc = forecast_dolar_blue_prophet(df_actual=dolar_blue_df, days_ahead=option_days_ahead)
             else:
                 dolar_blue_df_fc = None
@@ -155,7 +162,7 @@ def common_data(option_delta_years, option_days_ahead, origin, forecast=True, du
                     print(f'>> forecasting because delta_years_local = '
                           f'{dolar_blue_df.index[-1].year - dolar_blue_df.index[0].year}, '
                           f'and option_delta_years = {option_delta_years}')
-                    if forecast:
+                    if forecast or forecast == 'dolar_blue':
                         dolar_blue_df_fc = forecast_dolar_blue_prophet(df_actual=dolar_blue_df,
                                                                        days_ahead=option_days_ahead)
                     else:
@@ -164,7 +171,7 @@ def common_data(option_delta_years, option_days_ahead, origin, forecast=True, du
                 print('>> ingesting because file is old')
                 dolar_blue_df = ingest_dolar_blue(option_delta_years, dump)
                 print('>> forecasting because file is old')
-                if forecast:
+                if forecast or forecast == 'dolar_blue':
                     dolar_blue_df_fc = forecast_dolar_blue_prophet(df_actual=dolar_blue_df,
                                                                    days_ahead=option_days_ahead)
                 else:
@@ -173,7 +180,7 @@ def common_data(option_delta_years, option_days_ahead, origin, forecast=True, du
             print('>> ingesting because file was not found')
             dolar_blue_df = ingest_dolar_blue(option_delta_years, dump)
             print('>> forecasting because file was not found')
-            if forecast:
+            if forecast or forecast == 'dolar_blue':
                 dolar_blue_df_fc = forecast_dolar_blue_prophet(df_actual=dolar_blue_df, days_ahead=option_days_ahead)
             else:
                 dolar_blue_df_fc = None

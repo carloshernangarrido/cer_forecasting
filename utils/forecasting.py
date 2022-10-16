@@ -1,14 +1,18 @@
-from prophet import Prophet
+from typing import Union
+from prophet import Prophet, make_holidays
 import pandas as pd
 
 
-def forecast_cer_prophet(df_actual: pd.DataFrame, days_ahead: int = 1, dump: bool = True):
+def forecast_cer_prophet(df_actual: pd.DataFrame, days_ahead: int = 1, dump: bool = True,
+                         dolar_blue_df_fc: Union[None, pd.DataFrame] = None, holidays_flag: bool = False):
     """
 Uses prophet to forecast df a number of days ahead.
     :param dump: flag to decide if dump df into a pickle
     :param df_actual: data frame containing actual data
     :param days_ahead: Number of days to forecast.
+    :param dolar_blue_df_fc: pre forecasted dolar blue to be used as an addition regressor. If None, it is not used.
     :return: data frame containing actual and forecasted data
+    :param holidays_flag: include or not holidays
     """
     cer_cap = 1000.0
     df = df_actual.copy(deep=True)
@@ -17,8 +21,15 @@ Uses prophet to forecast df a number of days ahead.
     day15_of_month = [date for date in df['ds'] if date.day == 15]
     df['cap'] = cer_cap
     m = Prophet(changepoints=day15_of_month, growth='logistic')
+    if holidays_flag:
+        m.add_country_holidays(country_name='Argentina')
+    if isinstance(dolar_blue_df_fc, pd.DataFrame):
+        df['dolar_blue'] = dolar_blue_df_fc['venta']
+        m.add_regressor('dolar_blue')
     m.fit(df)
     future = m.make_future_dataframe(periods=days_ahead)
+    if isinstance(dolar_blue_df_fc, pd.DataFrame):
+        future['dolar_blue'] = dolar_blue_df_fc['venta'].values[0:len(future)]
     future['cap'] = cer_cap
     df_future = m.predict(future)
     cer_df_fc = pd.DataFrame(data=None, columns=df_actual.columns,
@@ -32,12 +43,14 @@ Uses prophet to forecast df a number of days ahead.
     return cer_df_fc
 
 
-def forecast_dolar_blue_prophet(df_actual: pd.DataFrame, days_ahead: int = 1, dump: bool = True):
+def forecast_dolar_blue_prophet(df_actual: pd.DataFrame, days_ahead: int = 1, dump: bool = True,
+                                holidays_flag: bool = False):
     """
 Uses prophet to forecast df a number of days ahead.
     :param dump: flag to decide if dump df into a pickle
     :param df_actual: data frame containing actual data
     :param days_ahead: Number of days to forecast.
+    :param holidays_flag: include or not holidays
     :return: data frame containing actual and forecasted data
     """
     dolar_blue_cap = 1000.0
@@ -46,6 +59,8 @@ Uses prophet to forecast df a number of days ahead.
     df.insert(0, column='y', value=df.venta)
     df['cap'] = dolar_blue_cap
     m = Prophet(growth='logistic')
+    if holidays_flag:
+        m.add_country_holidays(country_name='Argentina')
     m.fit(df)
     future = m.make_future_dataframe(periods=days_ahead)
     future['cap'] = dolar_blue_cap

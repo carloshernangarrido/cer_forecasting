@@ -12,9 +12,9 @@ if __name__ == '__main__':
         page_title='PronostiCER',
         layout='wide',
         initial_sidebar_state='auto')
-    option_uva_cer, option_delta_years, option_days_ahead, option_origin = common_dash()
+    option_uva_cer, option_delta_years, option_days_ahead, option_origin, holidays_flag = common_dash()
     cer_df, uva_df, cer_df_fc, uva_df_fc, today, dolar_blue_df, dolar_blue_df_fc = \
-        common_data(option_delta_years, option_days_ahead, option_origin)
+        common_data(option_delta_years, option_days_ahead, option_origin, holidays_flag=holidays_flag)
 
     with st.expander(label="Comparación UVA vs Dólar Blue", expanded=True):
         st.subheader('Comparación UVA vs Dólar Blue')

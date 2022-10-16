@@ -5,9 +5,10 @@ from utils.plots import df2plot, plot_df_fc
 from utils.pre_processing import get_uva_df, get_day_diff
 
 if __name__ == '__main__':
-    option_uva_cer, option_delta_years, option_days_ahead, option_origin = common_dash()
+    option_uva_cer, option_delta_years, option_days_ahead, option_origin, holidays_flag = common_dash()
     cer_df, uva_df, cer_df_fc, uva_df_fc, today, dolar_blue_df, dolar_blue_df_fc = \
-        common_data(option_delta_years, option_days_ahead, option_origin, forecast=False, dump=False)
+        common_data(option_delta_years, option_days_ahead, option_origin, forecast=False, dump=False,
+                    holidays_flag=holidays_flag)
 
     date_val = (today - dt.timedelta(days=option_days_ahead))
     dolar_blue_df_val = dolar_blue_df[:date_val]

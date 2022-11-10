@@ -62,26 +62,26 @@ def plot_comp(uva_df_plot, uva_df_fc_plot, today, dolar_blue_df_plot, dolar_blue
                     y=uva_df_plot.y / uva_df_plot.y[today],
                     name='uva actual', line={'color': 'red'})
     fig.add_scatter(x=uva_df_fc_plot.index,
-                    y=uva_df_fc_plot.yhat / uva_df_plot.y[today],
+                    y=uva_df_fc_plot.yhat / uva_df_fc_plot.yhat[today],
                     name='uva pronosticado', line={'color': 'orange'})
     fig.add_scatter(x=uva_df_fc_plot.index,
-                    y=uva_df_fc_plot.yhat_upper / uva_df_plot.y[today],
+                    y=uva_df_fc_plot.yhat_upper / uva_df_fc_plot.yhat[today],
                     name='uva pronosticado mayor', line={'color': 'pink'}, showlegend=False)
     fig.add_scatter(x=uva_df_fc_plot.index,
-                    y=uva_df_fc_plot.yhat_lower / uva_df_plot.y[today],
+                    y=uva_df_fc_plot.yhat_lower / uva_df_fc_plot.yhat[today],
                     name='uva incertidumbre', line={'color': 'pink'})
 
     fig.add_scatter(x=dolar_blue_df_plot.index,
                     y=dolar_blue_df_plot.y / dolar_blue_df_plot.y[today],
                     name='dólar blue actual', line={'color': 'DarkGreen'})
     fig.add_scatter(x=dolar_blue_df_fc_plot.index,
-                    y=dolar_blue_df_fc_plot.yhat / dolar_blue_df_plot.y[today],
+                    y=dolar_blue_df_fc_plot.yhat / dolar_blue_df_fc_plot.yhat[today],
                     name='dólar blue pronosticado', line={'color': 'LimeGreen'})
     fig.add_scatter(x=dolar_blue_df_fc_plot.index,
-                    y=dolar_blue_df_fc_plot.yhat_upper / dolar_blue_df_plot.y[today],
+                    y=dolar_blue_df_fc_plot.yhat_upper / dolar_blue_df_fc_plot.yhat[today],
                     name='dólar blue pronosticado mayor', line={'color': 'LightGreen'}, showlegend=False)
     fig.add_scatter(x=dolar_blue_df_fc_plot.index,
-                    y=dolar_blue_df_fc_plot.yhat_lower / dolar_blue_df_plot.y[today],
+                    y=dolar_blue_df_fc_plot.yhat_lower / dolar_blue_df_fc_plot.yhat[today],
                     name='dólar blue incertidumbre', line={'color': 'LightGreen'})
     fig.update_xaxes(title_text='fecha')
     fig.update_layout(legend=dict(

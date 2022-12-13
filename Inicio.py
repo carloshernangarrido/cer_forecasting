@@ -5,7 +5,6 @@ from utils.common import common_data, common_dash
 from utils.plots import plot_df_fc, df2plot, plot_comp
 from utils.pre_processing import get_day_diff
 
-
 if __name__ == '__main__':
     st.set_page_config(
         page_icon="👋",
@@ -29,10 +28,16 @@ if __name__ == '__main__':
 
         cols = st.columns(3)
         if cols[1].button("... quiero ver más allá de lo evidente ..."):
-            fig.update_xaxes(range=[today - datetime.timedelta(days=360*option_delta_years),
-                                    today + datetime.timedelta(days=option_days_ahead)])
+            t_range = [today - datetime.timedelta(days=30),
+                       today + datetime.timedelta(days=option_days_ahead)]
+            fig.update_xaxes(range=t_range)
+            fig.update_yaxes(
+                range=[min((min(dolar_blue_df_fc_plot.yhat_lower[t_range[0]:t_range[1]] / dolar_blue_df_fc_plot.yhat[today]),
+                            min(uva_df_fc_plot.yhat_lower[t_range[0]:t_range[1]] / uva_df_fc_plot.yhat[today]))),
+                       max((max(dolar_blue_df_fc_plot.yhat_upper[today:] / dolar_blue_df_fc_plot.yhat[today]),
+                            max(uva_df_fc_plot.yhat_upper[t_range[0]:t_range[1]] / uva_df_fc_plot.yhat[today])))])
         else:
-            fig.update_xaxes(range=[today - datetime.timedelta(days=360*option_delta_years),
+            fig.update_xaxes(range=[today - datetime.timedelta(days=360 * option_delta_years),
                                     today + datetime.timedelta(days=30)])
             button_state = 0
         st.plotly_chart(fig, use_container_width=True)
@@ -85,5 +90,3 @@ if __name__ == '__main__':
         if st.button(label="Código fuente:"):
             st.markdown('<a href="https://github.com/carloshernangarrido" target="_blank">En mi perfil de github!</a>',
                         unsafe_allow_html=True)
-
-

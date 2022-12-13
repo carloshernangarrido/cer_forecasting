@@ -82,7 +82,7 @@ def common_data(option_delta_years, option_days_ahead, origin, forecast=True, du
     elif origin == 'auto':
         try:
             local_date = dt.datetime.fromtimestamp(pathlib.Path('cer_df.pickle').stat().st_mtime)
-            if local_date.date() == dt.datetime.today().date():
+            if local_date.date() > dt.datetime.today().date() - dt.timedelta(days=2):
                 print('>> reading local')
                 cer_df = pd.read_pickle('cer_df.pickle')
                 cer_df_fc = pd.read_pickle('cer_df_fc.pickle')
@@ -150,7 +150,7 @@ def common_data(option_delta_years, option_days_ahead, origin, forecast=True, du
     elif origin == 'auto':
         try:
             local_date = dt.datetime.fromtimestamp(pathlib.Path('dolar_blue_df.pickle').stat().st_mtime)
-            if local_date.date() == dt.datetime.today().date():
+            if local_date.date() > dt.datetime.today().date() - dt.timedelta(days=2):
                 print('>> reading local')
                 dolar_blue_df = pd.read_pickle('dolar_blue_df.pickle')
                 dolar_blue_df_fc = pd.read_pickle('dolar_blue_df_fc.pickle')

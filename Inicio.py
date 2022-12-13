@@ -83,7 +83,7 @@ if __name__ == '__main__':
                 "\nDatos de dólar blue tomados de: https://www.ambito.com/"
                 "\nPronosticado con Facebook Prophet")
         if st.button(label="Código fuente:"):
-            st.markdown('<a href="https://github.com/carloshernangarrido" target="_self">En mi perfil de github!</a>',
+            st.markdown('<a href="https://github.com/carloshernangarrido" target="_blank">En mi perfil de github!</a>',
                         unsafe_allow_html=True)
 
 

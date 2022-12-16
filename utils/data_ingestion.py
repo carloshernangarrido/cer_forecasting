@@ -45,7 +45,7 @@ def get_cer_df(url: str = None, delta_years: int = 1):
     driver.get(url)
     fecha_desde = driver.find_element(By.NAME, 'fecha_desde')
     fecha_desde.click()
-    fecha_desde.send_keys(str((pytz.datetime.datetime.today().date() - dt.timedelta(days=delta_years*365)).isoformat()))
+    fecha_desde.send_keys(str((pytz.datetime.datetime.today().date() - dt.timedelta(days=delta_years*370)).isoformat()))
     fecha_hasta = driver.find_element(By.NAME, 'fecha_hasta')
     fecha_hasta.click()
     fecha_hasta.send_keys(str(pytz.datetime.datetime.today().date().isoformat()))
@@ -94,7 +94,7 @@ def get_dolar_blue_df(url: str = None, delta_years: int = 10):
         for i in range(10):
             fecha_desde.send_keys(Keys.BACK_SPACE)
         driver.implicitly_wait(1)
-        fecha_keys = (pytz.datetime.datetime.today().date() - dt.timedelta(days=delta_years*365)).strftime('%d-%m-%Y')
+        fecha_keys = (pytz.datetime.datetime.today().date() - dt.timedelta(days=delta_years*370)).strftime('%d-%m-%Y')
         fecha_desde.send_keys(fecha_keys)
         driver.implicitly_wait(1)
         fecha_desde.send_keys(Keys.ENTER)

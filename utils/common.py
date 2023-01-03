@@ -87,7 +87,7 @@ def common_data(option_delta_years, option_days_ahead, origin, forecast=True, du
                 cer_df = pd.read_pickle('cer_df.pickle')
                 cer_df_fc = pd.read_pickle('cer_df_fc.pickle')
                 uva_df_fc = get_uva_df(cer_df_fc)
-                if cer_df.index[-1].year - cer_df.index[0].year != option_delta_years:
+                if cer_df.index[-1].year - cer_df.index[0].year < option_delta_years:
                     print(f'>> ingesting because delta_years_local = {cer_df.index[-1].year - cer_df.index[0].year}, '
                           f'and option_delta_years = {option_delta_years}')
                     cer_df = ingest_cer(option_delta_years, dump)
@@ -154,7 +154,7 @@ def common_data(option_delta_years, option_days_ahead, origin, forecast=True, du
                 print('>> reading local')
                 dolar_blue_df = pd.read_pickle('dolar_blue_df.pickle')
                 dolar_blue_df_fc = pd.read_pickle('dolar_blue_df_fc.pickle')
-                if dolar_blue_df.index[-1].year - dolar_blue_df.index[0].year != option_delta_years:
+                if dolar_blue_df.index[-1].year - dolar_blue_df.index[0].year < option_delta_years:
                     print(f'>> ingesting because delta_years_local = '
                           f'{dolar_blue_df.index[-1].year - dolar_blue_df.index[0].year}, '
                           f'and option_delta_years = {option_delta_years}')
